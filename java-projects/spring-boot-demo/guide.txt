@@ -1,0 +1,5 @@
+http://localhost:8080/testBoot/getUser/1
+
+http://localhost:8080/testBoot/setRedis/key1/value1
+
+http://localhost:8080/testBoot/getRedis/key1
