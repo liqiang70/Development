@@ -1,0 +1,71 @@
+server:
+  port: 8010
+
+spring:
+  application:
+     name: demo-config
+     
+  boot:
+    admin:
+      client:
+        instance:
+          service-base-url: http://localhost:8769
+
+  datasource:
+     url: jdbc:mysql://192.168.56.22:3306/springcloud_config?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&serverTimezone=GMT%2B8
+     username: root
+     password: 123456
+     driver-class-name: com.mysql.cj.jdbc.Driver
+     
+  cloud:
+    config:
+       label: master
+       server:
+         jdbc:
+           sql: SELECT key1, value1 from config_properties where APPLICATION=? and PROFILE=? and LABEL=?
+           
+    bus:
+      enabled: true
+      trace: 
+        enabled: true
+        
+    consul: 
+      host: 192.168.56.28
+      port: 8500
+      discovery:
+        acl-token: 47eca91b-a5e7-e82d-6424-dba7637e0737
+        register: true
+        hostname: 192.168.56.1
+        serviceName: ${spring.application.name}
+        instance-id: ${spring.application.name}-${server.port}-${spring.cloud.consul.discovery.hostname}
+        healthCheckInterval: 15s
+
+  rabbitmq:
+    host: 192.168.56.26
+    port: 5672
+    username: rabbit
+    password: 123456
+    virtual-host: /
+
+logging:
+   file: ./logs/server-${spring.application.name}.log
+   
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+info:
+  app:
+    name: ${spring.application.name}-${server.port}
+  company:
+    name: example.com
+  build:
+    group: com.example.springcloud
+    artifactId: spring-cloud-gradle-config
+    version: 0.0.1-SNAPSHOT

@@ -1,0 +1,43 @@
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - D:/dev-ops/project/branchs/develop/gradle/gradle-main-project/logs/server-demo.log
+  fields:
+    event: 
+      dataset: springboot-demo
+  fields_under_root: true
+  multiline:
+    pattern: '^\t|^Caused by:'
+    negate: false
+    match: after
+
+- type: log
+  enabled: true
+  paths:
+    - D:/dev-ops/project/branchs/develop/gradle/spring-cloud-gradle/spring-cloud-gradle-config/build/libs/spring-cloud-gradle-config-8010.log
+  fields:
+    event: 
+      dataset: springcloud-config
+  fields_under_root: true
+  multiline:
+    pattern: '^\t|^Caused by:'
+    negate: false
+    match: after
+
+filebeat.config.modules:
+  path: ${path.config}/modules.d/*.yml
+  reload.enabled: false
+
+setup.template.settings:
+  index.number_of_shards: 1
+
+output.elasticsearch:
+  hosts: ["192.168.56.50:9200"]
+
+processors:
+  - add_host_metadata: ~
+  - add_cloud_metadata: ~
+  - add_docker_metadata: ~
+  - add_kubernetes_metadata: ~
+

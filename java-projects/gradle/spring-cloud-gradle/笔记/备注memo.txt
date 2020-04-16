@@ -1,0 +1,76 @@
+1）执行启动命令
+java -jar -Xms128m -Xmx512m -XX:PermSize=128m -XX:MaxPermSize=512m spring-cloud-gradle-ribbon-customer-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev --server.port=8050 --spring.cloud.consul.discovery.hostname=192.168.56.1 &
+
+2）添加防火墙
+firewall-cmd --add-port=8050/tcp --permanent 
+firewall-cmd --reload
+
+3）consul配置多节点
+  "retry_join":["192.168.56.28:18301","192.168.56.28:28301","192.168.56.28:38301","192.168.56.29:18301","192.168.56.29:28301","192.168.56.29:38301"],
+  
+
+4）查看工程依赖树  
+gradle :spring-cloud-gradle-turbine:dependencies > dep.txt
+
+
+5）端口分配：
+eureka:8761,8762
+springadmin:8769
+zipkin:9411
+
+config:8010
+seata:8015
+
+hystrix-dashboard:8020
+turbin:8030
+
+zuul:8040
+gateway:8045
+
+ribbon-customer:8050
+feign-customer:8055
+
+ribbon-r4j:8060
+
+service-provider:8080
+task:8090
+auth:8093
+
+seata-account:8095
+seata-order:8096
+seata-storage:8097
+seata-business:8098
+
+test:9000
+
+6）
+retry设置参数与hystrix冲突，。如启用hystrix，则retry无效。
+
+7）
+springcloud 可自定义配置项。 AuthorAutoConfiguration, @EnableConfigurationProperties(AuthorPropertis.class)
+
+
+8） 断路器
+	implementation 'org.springframework.cloud:spring-cloud-circuitbreaker-resilience4j'
+	implementation "io.github.resilience4j:resilience4j-spring-boot2:1.1.0"
+	implementation "io.github.resilience4j:resilience4j-spring-cloud2:1.1.0"
+	implementation "io.github.resilience4j:resilience4j-timelimiter:1.1.0"
+
+9)
+错误: 找不到或无法加载主类
+Run Configurations
+选择指定的配置
+Classpath
+Use temporary JAR to specify classpath (to avoid classpath length limitations) 勾选
+
+10)maven下载不成功
+换个时间下载
+
+11）quartz 默认是使用c3p0连接池，如需改用hikaricp​​​​
+org.quartz.dataSource.qzDS.provider=hikaricp
+
+
+12) spring cache/redis 与 redisson 分布式锁冲突,已解决
+
+13) 对象映射 beansutils，
+

@@ -1,0 +1,64 @@
+
+http://127.0.0.1:8080/swagger-ui.html
+
+http://127.0.0.1:8081/swagger-ui.html
+
+http://127.0.0.1:8082/swagger-ui.html
+
+cd build\libs
+java -jar -Xms128m -Xmx512m -XX:PermSize=128m -XX:MaxPermSize=512m spring-cloud-gradle-service-provider-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev --server.port=8080 > spring-cloud-gradle-service-provider-8080.log 2>&1 
+
+cd build\libs
+java -jar -Xms128m -Xmx512m -XX:PermSize=128m -XX:MaxPermSize=512m spring-cloud-gradle-service-provider-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev --server.port=8081 > spring-cloud-gradle-service-provider-8081.log 2>&1 
+
+cd build\libs
+java -jar -Xms128m -Xmx512m -XX:PermSize=128m -XX:MaxPermSize=512m spring-cloud-gradle-service-provider-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev --server.port=8082 > spring-cloud-gradle-service-provider-8082.log 2>&1 
+
+
+cd build\libs
+tail -f spring-cloud-gradle-service-provider-8080.log
+
+cd build\libs
+tail -f spring-cloud-gradle-service-provider-8081.log
+
+cd build\libs
+tail -f spring-cloud-gradle-service-provider-8082.log
+
+#单独编译：
+需要先启动
+1）eureka或consul 
+2）config
+3）执行命令
+gradle :spring-cloud-gradle-service-provider:build
+
+
+测试URL：
+http://127.0.0.1:8080/hello/hello
+http://127.0.0.1:8080/hello
+http://127.0.0.1:8080/greet/tom
+http://127.0.0.1:8080/users/1
+http://127.0.0.1:8080/users?ids=1,2,3
+
+
+#读取数据库中配置：
+http://127.0.0.1:8080/config/show
+
+#手动更新本服务配置：
+curl -X POST http://127.0.0.1:8080/actuator/refresh
+
+#发送流测试数据到rabbitmq：
+http://127.0.0.1:8080/stream/send
+
+#hystrix合并：
+http://127.0.0.1:8080/users/1
+http://127.0.0.1:8080/users?ids=1,2,3
+
+#测试header请求，需添加header， name=this is my name
+http://127.0.0.1:8080/headers
+
+#feign集成工程
+http://127.0.0.1:8080/refactor-service/tom_jerry
+
+
+#redisson lock
+http://127.0.0.1:8080/lock/redisson

@@ -1,0 +1,7 @@
+uri: lb://demo-service-provider
+http://127.0.0.1:8045/gateway_ribbon/ribbon/users/1
+
+uri: lb://demo-ribbon-customer
+uri: lb://demo-feign-customer
+http://127.0.0.1:8045/gateway_ribbon/ribbon/hello
+http://127.0.0.1:8045/gateway_feign/feign/hello

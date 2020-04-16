@@ -1,0 +1,1 @@
+cd ..\build\libs && java -jar -Xms128m -Xmx512m -XX:PermSize=128m -XX:MaxPermSize=512m spring-cloud-gradle-eureka-0.0.1-SNAPSHOT.jar --spring.profiles.active=peer02 --server.port=8762 > spring-cloud-gradle-eureka-8762.log 2>&1 

@@ -1,0 +1,30 @@
+logging:
+  level:
+    org.springframework: info
+    
+server:
+  port: 9100
+  
+spring:
+  application:
+     name: simple-api
+
+info:
+  app:
+    name: ${spring.application.name}-${server.port}
+  company:
+    name: example.com
+  build:
+    group: com.example.springcloud
+    artifactId: spring-cloud-gradle-simple-api
+    version: 0.0.1-SNAPSHOT
+
+    debug: true
+
+management:
+   endpoints: 
+     web:
+       exposure: 
+         include: info,health,refresh
+
+  

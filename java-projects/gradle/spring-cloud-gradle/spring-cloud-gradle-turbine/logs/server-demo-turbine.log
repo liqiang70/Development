@@ -1,0 +1,25 @@
+2020-04-10 17:44:25.189 [Test worker] INFO  com.example.demo.TurbineApplicationTests - The following profiles are active: dev
+2020-04-10 17:44:34.251 [Test worker] WARN  o.springframework.boot.actuate.endpoint.EndpointId - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-10 17:44:35.396 [Test worker] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=9c6caf05-576b-34da-8b26-5a353f0f601f
+2020-04-10 17:44:42.534 [Test worker] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2020-04-10 17:44:47.598 [Test worker] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-04-10 17:44:47.599 [Test worker] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-10 17:44:47.626 [Test worker] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-04-10 17:44:47.626 [Test worker] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-10 17:44:49.966 [Test worker] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-10 17:44:53.345 [Test worker] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-04-10 17:44:57.134 [Test worker] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'catalogWatchTaskScheduler'
+2020-04-10 17:44:57.214 [Test worker] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 20 endpoint(s) beneath base path '/actuator'
+2020-04-10 17:44:57.347 [Test worker] INFO  o.s.cloud.netflix.turbine.SpringAggregatorFactory - Could not find monitors: []
+2020-04-10 17:44:57.868 [Test worker] INFO  com.netflix.turbine.monitor.cluster.ClusterMonitor - Registering event handler for cluster monitor: StaticListener_For_Aggregator
+2020-04-10 17:44:58.000 [Test worker] INFO  com.netflix.turbine.handler.TurbineDataDispatcher - 
+
+Just added and starting handler tuple: StaticListener_For_Aggregator
+2020-04-10 17:44:58.001 [Test worker] INFO  com.netflix.turbine.monitor.cluster.ClusterMonitor - All event handlers for cluster monitor: [StaticListener_For_Aggregator]
+2020-04-10 17:44:58.002 [Test worker] INFO  com.netflix.turbine.monitor.cluster.ClusterMonitor - Starting up the cluster monitor for default_agg
+2020-04-10 17:44:58.023 [Test worker] INFO  com.netflix.turbine.discovery.InstanceObservable - Starting InstanceObservable at frequency: 60000 millis
+2020-04-10 17:44:58.031 [Timer-0] INFO  o.s.cloud.netflix.turbine.CommonsInstanceDiscovery - Fetching instance list for apps: [demo-ribbon-customer, demo-feign-customer]
+2020-04-10 17:44:58.112 [Timer-0] INFO  o.s.cloud.netflix.turbine.CommonsInstanceDiscovery - Fetching instances for app: demo-ribbon-customer
+2020-04-10 17:44:58.181 [Test worker] INFO  com.example.demo.TurbineApplicationTests - Started TurbineApplicationTests in 54.832 seconds (JVM running for 66.71)
+2020-04-10 17:45:00.074 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'catalogWatchTaskScheduler'
+2020-04-10 17:45:00.081 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'

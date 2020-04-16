@@ -1,0 +1,130 @@
+server:
+  port: 8060
+  
+spring:
+  application:
+     name: demo-ribbon-r4j
+
+  boot:
+    admin:
+      client:
+        instance:
+          service-base-url: http://localhost:8769
+
+  cloud:
+    consul: 
+      host: 192.168.56.28
+      port: 8500
+      discovery:
+        acl-token: 47eca91b-a5e7-e82d-6424-dba7637e0737
+        register: true
+        hostname: 192.168.56.1
+        serviceName: ${spring.application.name}
+        instance-id: ${spring.application.name}-${server.port}-${spring.cloud.consul.discovery.hostname}
+        healthCheckInterval: 15s
+
+#断路
+resilience4j.circuitbreaker:
+  instances:
+    backendA:
+      registerHealthIndicator: true
+      ringBufferSizeInClosedState: 10
+      ringBufferSizeInHalfOpenState: 3
+      waitDurationInOpenState: 10s
+      failureRateThreshold: 50
+      eventConsumerBufferSize: 2
+      recordFailurePredicate: com.example.demo.exception.RecordFailurePredicate
+      recordExceptions:
+        - org.springframework.web.client.HttpServerErrorException
+      ignoreExceptions:
+        - com.example.demo.exception.IgnoredException
+
+    backendB:
+      registerHealthIndicator: true
+      ringBufferSizeInClosedState: 10
+      ringBufferSizeInHalfOpenState: 3
+      waitDurationInOpenState: 10s
+      failureRateThreshold: 50
+      eventConsumerBufferSize: 2
+      recordFailurePredicate: com.example.demo.exception.RecordFailurePredicate
+      recordExceptions:
+        - org.springframework.web.client.HttpServerErrorException
+      ignoreExceptions:
+        - com.example.demo.exception.IgnoredException
+
+#重试
+resilience4j.retry:
+  instances:
+    backendA:
+      maxRetryAttempts: 3
+      waitDuration: 10s
+      enableExponentialBackoff: true
+      exponentialBackoffMultiplier: 2
+      retryExceptions:
+        - org.springframework.web.client.HttpServerErrorException
+      ignoreExceptions:
+        - java.io.IOException
+
+    backendB:
+      maxRetryAttempts: 3
+      waitDuration: 10s
+      enableExponentialBackoff: true
+      exponentialBackoffMultiplier: 2
+      retryExceptions:
+        - org.springframework.web.client.HttpServerErrorException
+      ignoreExceptions:
+        - java.io.IOException
+
+#隔离
+#resilience4j.bulkhead:
+#  instances:
+#    backendA:
+#      maxWaitDuration: 20ms
+#      maxConcurrentCalls: 10
+#
+#    backendB:
+#      maxWaitDuration: 10ms
+#      maxConcurrentCalls: 20
+
+#限流     
+resilience4j.ratelimiter:
+  instances:
+    backendA:
+      limitForPeriod: 10
+      limitRefreshPeriod: 1s
+      timeoutDuration: 0
+      registerHealthIndicator: true
+      eventConsumerBufferSize: 100
+      
+    backendB:
+      limitForPeriod: 6
+      limitRefreshPeriod: 500ms
+      timeoutDuration: 3s
+      registerHealthIndicator: true
+      eventConsumerBufferSize: 100
+
+logging:
+   file: ./logs/server-${spring.application.name}.log
+   
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+info:
+  app:
+    name: ${spring.application.name}-${server.port}
+  company:
+    name: example.com
+  build:
+    group: com.example.springcloud
+    artifactId: spring-cloud-gradle-ribbon-r4j
+    version: 0.0.1-SNAPSHOT
+
+    debug: true
+

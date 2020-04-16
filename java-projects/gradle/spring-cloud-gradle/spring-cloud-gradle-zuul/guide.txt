@@ -1,0 +1,15 @@
+http://127.0.0.1:8040/zuul-users/users/getUser?username=aaa8040&password=8040
+
+http://127.0.0.1:8041/zuul-users/users/getUser?username=aaa8041&password=8041
+
+http://127.0.0.1:8042/zuul-users/users/getUser?username=aaa8042&password=8042
+
+cd build\libs
+java -jar -Xms128m -Xmx512m -XX:PermSize=128m -XX:MaxPermSize=512m spring-cloud-gradle-zuul-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev --server.port=8040 > spring-cloud-gradle-zuul-8040.log 2>&1 
+
+cd build\libs
+java -jar -Xms128m -Xmx512m -XX:PermSize=128m -XX:MaxPermSize=512m spring-cloud-gradle-zuul-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev --server.port=8041 > spring-cloud-gradle-zuul-8041.log 2>&1 
+
+cd build\libs
+java -jar -Xms128m -Xmx512m -XX:PermSize=128m -XX:MaxPermSize=512m spring-cloud-gradle-zuul-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev --server.port=8042 > spring-cloud-gradle-zuul-8042.log 2>&1 
+

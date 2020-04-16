@@ -1,0 +1,2 @@
+cd ..\build\libs && java -classpath "." -jar -Xms128m -Xmx512m -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=512m spring-cloud-gradle-simple-api-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev --server.port=9100 > spring-cloud-gradle-simple-api-9100.log 2>&1 
+ 

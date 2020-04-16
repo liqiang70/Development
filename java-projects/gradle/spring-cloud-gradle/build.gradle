@@ -1,0 +1,88 @@
+/*
+	buildscript代码块中的声明是gradle脚本自身需要的资源。
+	可以声明的资源包括依赖项、第三方插件、maven仓库地址等。
+	gradle在执行脚本时，会优先执行buildscript代码块中的内容，然后才会执行剩余的build脚本。
+*/
+
+buildscript {
+    ext {
+        springCloudVersion = "Hoxton.SR3"
+        swaggerVersion = "2.9.2"
+        logstashlogbackVersion = "6.3"
+        lang3Version = "3.9"
+        lombokVersion = "1.18.12"
+        redissonVersion = "3.12.3"
+        fescarVersion = "0.4.2"
+        seataVersion = "2.2.0.RELEASE"
+        mybatisVersion = "2.1.1"
+        pool2Version = "2.8.0"
+        springadminVersion = "2.2.2"
+	
+        /*seata需要用得到1.2.17版本的log4j*/
+        log4jVersion = "1.2.17"
+    }
+
+    repositories {
+        mavenLocal()
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+        mavenCentral()
+    }
+}
+
+plugins {
+	id 'org.springframework.boot' version '2.2.5.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'io.franzbecker.gradle-lombok' version '3.3.0'
+	id 'java'
+}
+
+/* 所有子项目的通用配置 */
+subprojects {
+
+    /* 使用二进制插件 */
+    apply plugin: "java" /* java是Gradle的核心插件，是内置的，内置插件不需要配置依赖路径 */
+    /* 注意gradle插件不再自动应用，所以这里需要指定 */
+    apply plugin: "org.springframework.boot"
+    /* 依赖管理插件仍然是一个spring-boot-gradle-plugin传递依赖，所以无需在build.gradle配置中明确列出此依赖。 */
+    apply plugin: "io.spring.dependency-management" /* 依赖管理，用来传递spring的依赖 */
+	/*lombok 预编译*/
+	apply plugin: "io.franzbecker.gradle-lombok"
+
+    group = "com.example.springcloud"
+    version = "0.0.1-SNAPSHOT" /* 项目版本 */
+    /* 指定jdk版本 */
+    sourceCompatibility = "1.8"
+    /* java编译的时候缺省状态下会因为中文字符而失败 */
+    [compileJava, compileTestJava, javadoc]*.options*.encoding = "UTF-8"
+
+    repositories {
+        mavenLocal()
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+        mavenCentral()
+    }
+
+    /* 添加通用依赖 */
+    dependencies {
+		implementation "org.springframework.boot:spring-boot-starter-actuator"
+        implementation "io.springfox:springfox-swagger2:${swaggerVersion}"
+		implementation "io.springfox:springfox-swagger-ui:${swaggerVersion}"
+	    implementation "de.codecentric:spring-boot-admin-starter-client:${springadminVersion}"
+		implementation "org.apache.commons:commons-lang3:${lang3Version}"
+		implementation "org.projectlombok:lombok:${lombokVersion}"
+		testImplementation("org.springframework.boot:spring-boot-starter-test") {
+			exclude group: "org.junit.vintage", module: "junit-vintage-engine"
+		}
+    }
+
+    dependencyManagement {
+		imports { 
+			mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+		}
+	}
+
+	test {
+		useJUnitPlatform()
+	}
+	
+}
+

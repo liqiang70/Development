@@ -1,0 +1,9 @@
+http://127.0.0.1:8020/hystrix
+
+cd build\libs
+java -jar -Xms128m -Xmx512m -XX:PermSize=128m -XX:MaxPermSize=512m spring-cloud-gradle-hystrix-dashboard-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev --server.port=8020 > spring-cloud-gradle-config-8020.log 2>&1 
+
+输入源：
+http://localhost:8050/actuator/hystrix.stream
+http://localhost:8055/actuator/hystrix.stream
+http://localhost:8030/turbine.stream

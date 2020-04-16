@@ -1,0 +1,14 @@
+2020-04-10 17:42:25.146 [Test worker] INFO  com.example.demo.HystrixDashboardApplicationTests - The following profiles are active: dev
+2020-04-10 17:42:28.466 [Test worker] WARN  o.springframework.boot.actuate.endpoint.EndpointId - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-10 17:42:29.045 [Test worker] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=b740de63-8cc8-38a6-955b-d6395516cf94
+2020-04-10 17:42:30.857 [Test worker] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-04-10 17:42:30.858 [Test worker] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-10 17:42:30.909 [Test worker] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-04-10 17:42:30.909 [Test worker] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-10 17:42:32.883 [Test worker] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-10 17:42:40.247 [Test worker] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-04-10 17:42:40.615 [Test worker] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'catalogWatchTaskScheduler'
+2020-04-10 17:42:40.690 [Test worker] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 20 endpoint(s) beneath base path '/actuator'
+2020-04-10 17:42:40.857 [Test worker] INFO  com.example.demo.HystrixDashboardApplicationTests - Started HystrixDashboardApplicationTests in 26.695 seconds (JVM running for 35.092)
+2020-04-10 17:42:42.593 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'catalogWatchTaskScheduler'
+2020-04-10 17:42:42.603 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'

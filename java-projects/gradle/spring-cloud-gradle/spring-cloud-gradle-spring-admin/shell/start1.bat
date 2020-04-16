@@ -1,0 +1,2 @@
+cd ..\build\libs && java -javaagent:D:\dev-cloud\skywalking-agent\skywalking-agent.jar -Dskywalking.agent.service_name=spring-admin -Dskywalking.collector.backend_service=192.168.56.29:11800 -classpath "." -jar -Xms128m -Xmx512m -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=512m spring-cloud-gradle-spring-admin-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev --server.port=8769 > spring-cloud-gradle-spring-admin-8769.log 2>&1 
+ 

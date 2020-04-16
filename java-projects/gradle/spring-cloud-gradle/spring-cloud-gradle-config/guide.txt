@@ -1,0 +1,30 @@
+
+#mysql中创建数据库：
+CREATE DATABASE `springcloud_config`;
+
+#创建表
+CREATE TABLE `config_properties` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `key1` varchar(50) COLLATE utf8_bin NOT NULL,
+  `value1` varchar(500) COLLATE utf8_bin DEFAULT NULL,
+  `application` varchar(50) COLLATE utf8_bin NOT NULL,
+  `profile` varchar(50) COLLATE utf8_bin NOT NULL,
+  `label` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin
+
+#插入测试数据
+INSERT INTO `config_properties`(`id`, `key1`, `value1`, `application`, `profile`, `label`) VALUES (1, 'a.b', 'a.b.value', 'springcloud-service-provider', 'dev', 'master');
+INSERT INTO `config_properties`(`id`, `key1`, `value1`, `application`, `profile`, `label`) VALUES (2, 'c.d', 'c.d.value', 'springcloud-service-provider', 'dev', 'master');
+
+
+cd build\libs
+java -jar -Xms128m -Xmx512m -XX:PermSize=128m -XX:MaxPermSize=512m spring-cloud-gradle-configure-0.0.1-SNAPSHOT.jar --spring.profiles.active=jdbc --server.port=8010 > spring-cloud-gradle-config-8010.log 2>&1 
+
+cd build\libs
+java -jar -Xms128m -Xmx512m -XX:PermSize=128m -XX:MaxPermSize=512m spring-cloud-gradle-configure-0.0.1-SNAPSHOT.jar --spring.profiles.active=jdbc --server.port=8011 > spring-cloud-gradle-config-8011.log 2>&1 
+
+
+#推送配置更新通知到service-provider
+curl -X POST http://localhost:8010/actuator/bus-refresh
+

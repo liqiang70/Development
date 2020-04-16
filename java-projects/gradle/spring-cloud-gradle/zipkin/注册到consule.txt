@@ -1,0 +1,8 @@
+---------------------------------------------------------------
+注册服务到consul：
+curl -X PUT --header "X-Consul-Token: 47eca91b-a5e7-e82d-6424-dba7637e0737" -d '{"id":"demo-zipkin-9411-192-168-56-1","name": "demo-zipkin","address":"192.168.56.1","port":9411,"tags":[],"checks":[{"http":"http://192.168.56.1:9411/zipkin/","interval":"5s"}]}' http://192.168.56.28:8500/v1/agent/service/register
+
+
+curl --request PUT --header "X-Consul-Token: 47eca91b-a5e7-e82d-6424-dba7637e0737" http://192.168.56.28:18500/v1/agent/service/deregister/demo-zipkin-9411-192-168-56-1
+curl --request PUT --header "X-Consul-Token: 47eca91b-a5e7-e82d-6424-dba7637e0737" http://192.168.56.28:28500/v1/agent/service/deregister/demo-zipkin-9411-192-168-56-1
+curl --request PUT --header "X-Consul-Token: 47eca91b-a5e7-e82d-6424-dba7637e0737" http://192.168.56.28:38500/v1/agent/service/deregister/demo-zipkin-9411-192-168-56-1

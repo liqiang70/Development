@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.TblAlarmconnectorMapper">
+  <resultMap id="BaseResultMap" type="com.example.demo.model.TblAlarmconnector">
+    <id column="tid" jdbcType="BIGINT" property="tid" />
+    <result column="uiduserid" jdbcType="VARCHAR" property="uiduserid" />
+    <result column="strpwd" jdbcType="VARCHAR" property="strpwd" />
+    <result column="struserdes" jdbcType="VARCHAR" property="struserdes" />
+    <result column="iupdatetime" jdbcType="BIGINT" property="iupdatetime" />
+    <result column="strusername" jdbcType="VARCHAR" property="strusername" />
+    <result column="uidroleid" jdbcType="VARCHAR" property="uidroleid" />
+    <result column="token" jdbcType="VARCHAR" property="token" />
+    <result column="imodifydeptbyclient" jdbcType="INTEGER" property="imodifydeptbyclient" />
+    <result column="sstatus" jdbcType="INTEGER" property="sstatus" />
+    <result column="strmemo" jdbcType="VARCHAR" property="strmemo" />
+    <result column="stremail" jdbcType="VARCHAR" property="stremail" />
+    <result column="iispwdautosent" jdbcType="INTEGER" property="iispwdautosent" />
+    <result column="strunit" jdbcType="VARCHAR" property="strunit" />
+    <result column="strlocation" jdbcType="VARCHAR" property="strlocation" />
+    <result column="iispwssentsuc" jdbcType="INTEGER" property="iispwssentsuc" />
+    <result column="imodifypwdfirst" jdbcType="INTEGER" property="imodifypwdfirst" />
+    <result column="dtmodifypwdtime" jdbcType="TIMESTAMP" property="dtmodifypwdtime" />
+    <result column="dtendtime" jdbcType="TIMESTAMP" property="dtendtime" />
+    <result column="imaxbindingmaccount" jdbcType="INTEGER" property="imaxbindingmaccount" />
+    <result column="strdn" jdbcType="VARCHAR" property="strdn" />
+    <result column="struserposition" jdbcType="VARCHAR" property="struserposition" />
+    <result column="ifirstloginflag" jdbcType="INTEGER" property="ifirstloginflag" />
+    <result column="strusernamespell" jdbcType="VARCHAR" property="strusernamespell" />
+    <result column="ldappwdlastset" jdbcType="VARCHAR" property="ldappwdlastset" />
+    <result column="iorder" jdbcType="INTEGER" property="iorder" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    tid, uiduserid, strpwd, struserdes, iupdatetime, strusername, uidroleid, token, imodifydeptbyclient, 
+    sstatus, strmemo, stremail, iispwdautosent, strunit, strlocation, iispwssentsuc, 
+    imodifypwdfirst, dtmodifypwdtime, dtendtime, imaxbindingmaccount, strdn, struserposition, 
+    ifirstloginflag, strusernamespell, ldappwdlastset, iorder
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from tbl_alarmconnector
+    where tid = #{tid,jdbcType=BIGINT}
+  </select>
+   <select id="selectByUidUserid" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from tbl_alarmconnector
+    where uiduserid = #{uiduserid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from tbl_alarmconnector
+    where tid = #{tid,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.example.demo.model.TblAlarmconnector">
+    insert into tbl_alarmconnector (tid, uiduserid, strpwd, 
+      struserdes, iupdatetime, strusername, 
+      uidroleid, token, imodifydeptbyclient, 
+      sstatus, strmemo, stremail, 
+      iispwdautosent, strunit, strlocation, 
+      iispwssentsuc, imodifypwdfirst, dtmodifypwdtime, 
+      dtendtime, imaxbindingmaccount, strdn, 
+      struserposition, ifirstloginflag, strusernamespell, 
+      ldappwdlastset, iorder)
+    values (#{tid,jdbcType=BIGINT}, #{uiduserid,jdbcType=VARCHAR}, #{strpwd,jdbcType=VARCHAR}, 
+      #{struserdes,jdbcType=VARCHAR}, #{iupdatetime,jdbcType=BIGINT}, #{strusername,jdbcType=VARCHAR}, 
+      #{uidroleid,jdbcType=VARCHAR}, #{token,jdbcType=VARCHAR}, #{imodifydeptbyclient,jdbcType=INTEGER}, 
+      #{sstatus,jdbcType=INTEGER}, #{strmemo,jdbcType=VARCHAR}, #{stremail,jdbcType=VARCHAR}, 
+      #{iispwdautosent,jdbcType=INTEGER}, #{strunit,jdbcType=VARCHAR}, #{strlocation,jdbcType=VARCHAR}, 
+      #{iispwssentsuc,jdbcType=INTEGER}, #{imodifypwdfirst,jdbcType=INTEGER}, #{dtmodifypwdtime,jdbcType=TIMESTAMP}, 
+      #{dtendtime,jdbcType=TIMESTAMP}, #{imaxbindingmaccount,jdbcType=INTEGER}, #{strdn,jdbcType=VARCHAR}, 
+      #{struserposition,jdbcType=VARCHAR}, #{ifirstloginflag,jdbcType=INTEGER}, #{strusernamespell,jdbcType=VARCHAR}, 
+      #{ldappwdlastset,jdbcType=VARCHAR}, #{iorder,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.demo.model.TblAlarmconnector">
+    insert into tbl_alarmconnector
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="tid != null">
+        tid,
+      </if>
+      <if test="uiduserid != null">
+        uiduserid,
+      </if>
+      <if test="strpwd != null">
+        strpwd,
+      </if>
+      <if test="struserdes != null">
+        struserdes,
+      </if>
+      <if test="iupdatetime != null">
+        iupdatetime,
+      </if>
+      <if test="strusername != null">
+        strusername,
+      </if>
+      <if test="uidroleid != null">
+        uidroleid,
+      </if>
+      <if test="token != null">
+        token,
+      </if>
+      <if test="imodifydeptbyclient != null">
+        imodifydeptbyclient,
+      </if>
+      <if test="sstatus != null">
+        sstatus,
+      </if>
+      <if test="strmemo != null">
+        strmemo,
+      </if>
+      <if test="stremail != null">
+        stremail,
+      </if>
+      <if test="iispwdautosent != null">
+        iispwdautosent,
+      </if>
+      <if test="strunit != null">
+        strunit,
+      </if>
+      <if test="strlocation != null">
+        strlocation,
+      </if>
+      <if test="iispwssentsuc != null">
+        iispwssentsuc,
+      </if>
+      <if test="imodifypwdfirst != null">
+        imodifypwdfirst,
+      </if>
+      <if test="dtmodifypwdtime != null">
+        dtmodifypwdtime,
+      </if>
+      <if test="dtendtime != null">
+        dtendtime,
+      </if>
+      <if test="imaxbindingmaccount != null">
+        imaxbindingmaccount,
+      </if>
+      <if test="strdn != null">
+        strdn,
+      </if>
+      <if test="struserposition != null">
+        struserposition,
+      </if>
+      <if test="ifirstloginflag != null">
+        ifirstloginflag,
+      </if>
+      <if test="strusernamespell != null">
+        strusernamespell,
+      </if>
+      <if test="ldappwdlastset != null">
+        ldappwdlastset,
+      </if>
+      <if test="iorder != null">
+        iorder,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="tid != null">
+        #{tid,jdbcType=BIGINT},
+      </if>
+      <if test="uiduserid != null">
+        #{uiduserid,jdbcType=VARCHAR},
+      </if>
+      <if test="strpwd != null">
+        #{strpwd,jdbcType=VARCHAR},
+      </if>
+      <if test="struserdes != null">
+        #{struserdes,jdbcType=VARCHAR},
+      </if>
+      <if test="iupdatetime != null">
+        #{iupdatetime,jdbcType=BIGINT},
+      </if>
+      <if test="strusername != null">
+        #{strusername,jdbcType=VARCHAR},
+      </if>
+      <if test="uidroleid != null">
+        #{uidroleid,jdbcType=VARCHAR},
+      </if>
+      <if test="token != null">
+        #{token,jdbcType=VARCHAR},
+      </if>
+      <if test="imodifydeptbyclient != null">
+        #{imodifydeptbyclient,jdbcType=INTEGER},
+      </if>
+      <if test="sstatus != null">
+        #{sstatus,jdbcType=INTEGER},
+      </if>
+      <if test="strmemo != null">
+        #{strmemo,jdbcType=VARCHAR},
+      </if>
+      <if test="stremail != null">
+        #{stremail,jdbcType=VARCHAR},
+      </if>
+      <if test="iispwdautosent != null">
+        #{iispwdautosent,jdbcType=INTEGER},
+      </if>
+      <if test="strunit != null">
+        #{strunit,jdbcType=VARCHAR},
+      </if>
+      <if test="strlocation != null">
+        #{strlocation,jdbcType=VARCHAR},
+      </if>
+      <if test="iispwssentsuc != null">
+        #{iispwssentsuc,jdbcType=INTEGER},
+      </if>
+      <if test="imodifypwdfirst != null">
+        #{imodifypwdfirst,jdbcType=INTEGER},
+      </if>
+      <if test="dtmodifypwdtime != null">
+        #{dtmodifypwdtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dtendtime != null">
+        #{dtendtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="imaxbindingmaccount != null">
+        #{imaxbindingmaccount,jdbcType=INTEGER},
+      </if>
+      <if test="strdn != null">
+        #{strdn,jdbcType=VARCHAR},
+      </if>
+      <if test="struserposition != null">
+        #{struserposition,jdbcType=VARCHAR},
+      </if>
+      <if test="ifirstloginflag != null">
+        #{ifirstloginflag,jdbcType=INTEGER},
+      </if>
+      <if test="strusernamespell != null">
+        #{strusernamespell,jdbcType=VARCHAR},
+      </if>
+      <if test="ldappwdlastset != null">
+        #{ldappwdlastset,jdbcType=VARCHAR},
+      </if>
+      <if test="iorder != null">
+        #{iorder,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.model.TblAlarmconnector">
+    update tbl_alarmconnector
+    <set>
+      <if test="uiduserid != null">
+        uiduserid = #{uiduserid,jdbcType=VARCHAR},
+      </if>
+      <if test="strpwd != null">
+        strpwd = #{strpwd,jdbcType=VARCHAR},
+      </if>
+      <if test="struserdes != null">
+        struserdes = #{struserdes,jdbcType=VARCHAR},
+      </if>
+      <if test="iupdatetime != null">
+        iupdatetime = #{iupdatetime,jdbcType=BIGINT},
+      </if>
+      <if test="strusername != null">
+        strusername = #{strusername,jdbcType=VARCHAR},
+      </if>
+      <if test="uidroleid != null">
+        uidroleid = #{uidroleid,jdbcType=VARCHAR},
+      </if>
+      <if test="token != null">
+        token = #{token,jdbcType=VARCHAR},
+      </if>
+      <if test="imodifydeptbyclient != null">
+        imodifydeptbyclient = #{imodifydeptbyclient,jdbcType=INTEGER},
+      </if>
+      <if test="sstatus != null">
+        sstatus = #{sstatus,jdbcType=INTEGER},
+      </if>
+      <if test="strmemo != null">
+        strmemo = #{strmemo,jdbcType=VARCHAR},
+      </if>
+      <if test="stremail != null">
+        stremail = #{stremail,jdbcType=VARCHAR},
+      </if>
+      <if test="iispwdautosent != null">
+        iispwdautosent = #{iispwdautosent,jdbcType=INTEGER},
+      </if>
+      <if test="strunit != null">
+        strunit = #{strunit,jdbcType=VARCHAR},
+      </if>
+      <if test="strlocation != null">
+        strlocation = #{strlocation,jdbcType=VARCHAR},
+      </if>
+      <if test="iispwssentsuc != null">
+        iispwssentsuc = #{iispwssentsuc,jdbcType=INTEGER},
+      </if>
+      <if test="imodifypwdfirst != null">
+        imodifypwdfirst = #{imodifypwdfirst,jdbcType=INTEGER},
+      </if>
+      <if test="dtmodifypwdtime != null">
+        dtmodifypwdtime = #{dtmodifypwdtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dtendtime != null">
+        dtendtime = #{dtendtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="imaxbindingmaccount != null">
+        imaxbindingmaccount = #{imaxbindingmaccount,jdbcType=INTEGER},
+      </if>
+      <if test="strdn != null">
+        strdn = #{strdn,jdbcType=VARCHAR},
+      </if>
+      <if test="struserposition != null">
+        struserposition = #{struserposition,jdbcType=VARCHAR},
+      </if>
+      <if test="ifirstloginflag != null">
+        ifirstloginflag = #{ifirstloginflag,jdbcType=INTEGER},
+      </if>
+      <if test="strusernamespell != null">
+        strusernamespell = #{strusernamespell,jdbcType=VARCHAR},
+      </if>
+      <if test="ldappwdlastset != null">
+        ldappwdlastset = #{ldappwdlastset,jdbcType=VARCHAR},
+      </if>
+      <if test="iorder != null">
+        iorder = #{iorder,jdbcType=INTEGER},
+      </if>
+    </set>
+    where tid = #{tid,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.demo.model.TblAlarmconnector">
+    update tbl_alarmconnector
+    set uiduserid = #{uiduserid,jdbcType=VARCHAR},
+      strpwd = #{strpwd,jdbcType=VARCHAR},
+      struserdes = #{struserdes,jdbcType=VARCHAR},
+      iupdatetime = #{iupdatetime,jdbcType=BIGINT},
+      strusername = #{strusername,jdbcType=VARCHAR},
+      uidroleid = #{uidroleid,jdbcType=VARCHAR},
+      token = #{token,jdbcType=VARCHAR},
+      imodifydeptbyclient = #{imodifydeptbyclient,jdbcType=INTEGER},
+      sstatus = #{sstatus,jdbcType=INTEGER},
+      strmemo = #{strmemo,jdbcType=VARCHAR},
+      stremail = #{stremail,jdbcType=VARCHAR},
+      iispwdautosent = #{iispwdautosent,jdbcType=INTEGER},
+      strunit = #{strunit,jdbcType=VARCHAR},
+      strlocation = #{strlocation,jdbcType=VARCHAR},
+      iispwssentsuc = #{iispwssentsuc,jdbcType=INTEGER},
+      imodifypwdfirst = #{imodifypwdfirst,jdbcType=INTEGER},
+      dtmodifypwdtime = #{dtmodifypwdtime,jdbcType=TIMESTAMP},
+      dtendtime = #{dtendtime,jdbcType=TIMESTAMP},
+      imaxbindingmaccount = #{imaxbindingmaccount,jdbcType=INTEGER},
+      strdn = #{strdn,jdbcType=VARCHAR},
+      struserposition = #{struserposition,jdbcType=VARCHAR},
+      ifirstloginflag = #{ifirstloginflag,jdbcType=INTEGER},
+      strusernamespell = #{strusernamespell,jdbcType=VARCHAR},
+      ldappwdlastset = #{ldappwdlastset,jdbcType=VARCHAR},
+      iorder = #{iorder,jdbcType=INTEGER}
+    where tid = #{tid,jdbcType=BIGINT}
+  </update>
+</mapper>

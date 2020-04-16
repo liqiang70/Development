@@ -1,0 +1,63 @@
+junit SampleTest
+
+测试下列功能：
+1、selectAll
+2、insert
+3、selectPage
+4、日志输出log
+
+------------------------------------------------
+
+注解名称	说明
+@TableName	实体类的类名和数据库表名不一致
+@TableId	实体类的主键名称和表中主键名称不一致
+@TableField	实体类中的成员名称和表中字段名称不一致
+
+排除实体类中非表字段
+----使用transient关键字修饰非表字段，但是被transient修饰后，无法进行序列化。
+----使用static关键字，因为我们使用的是lombok框架生成的get/set方法，所以对于静态变量，我们需要手动生成get/set方法。
+推荐使用@TableField(exist = false)注解
+
+------------------------------------------------
+
+    int insert(T entity);
+   
+    int deleteById(Serializable id);
+
+    int deleteByMap(@Param(Constants.COLUMN_MAP) Map<String, Object> columnMap);
+
+    int delete(@Param(Constants.WRAPPER) Wrapper<T> wrapper);
+
+    int deleteBatchIds(@Param(Constants.COLLECTION) Collection<? extends Serializable> idList);
+
+    int updateById(@Param(Constants.ENTITY) T entity);
+
+------------------------------------------------
+
+自定义sql语句
+
+level-1-ok
+
+junit SampleTest2
+
+@TableId(type = IdType.AUTO)
+@TableField(condition = SqlCondition.LIKE)
+
+逻辑删除
+@TableLogic
+@TableField(select = false)
+自定义sql,MybatisPlus不会忽略deleted属性，需要我们手动忽略
+
+(填充不适用）
+
+乐观锁：testLock
+
+sql执行性能查看： p6spy
+
+level-2-ok
+
+-------------------------------------------------------------
+
+junit SampleMasterTest
+junit SampleSlaveTest
+

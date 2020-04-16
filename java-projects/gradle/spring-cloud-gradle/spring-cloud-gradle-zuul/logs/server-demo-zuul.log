@@ -1,0 +1,17 @@
+2020-04-10 17:43:45.101 [Test worker] INFO  com.example.demo.ZuulApplicationTests - The following profiles are active: dev
+2020-04-10 17:43:49.389 [Test worker] WARN  o.springframework.boot.actuate.endpoint.EndpointId - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-10 17:43:50.326 [Test worker] WARN  o.springframework.boot.actuate.endpoint.EndpointId - Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2020-04-10 17:43:50.962 [Test worker] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=0710c7f1-8f3e-3d3c-9923-a71f79287c08
+2020-04-10 17:43:54.440 [Test worker] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-04-10 17:43:54.440 [Test worker] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-10 17:43:54.455 [Test worker] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-04-10 17:43:54.456 [Test worker] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-10 17:43:56.656 [Test worker] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-10 17:44:17.817 [Test worker] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-04-10 17:44:18.215 [Test worker] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'catalogWatchTaskScheduler'
+2020-04-10 17:44:18.631 [Test worker] INFO  o.s.cloud.netflix.zuul.ZuulFilterInitializer - Starting filter initializer
+2020-04-10 17:44:19.706 [Test worker] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 23 endpoint(s) beneath base path '/actuator'
+2020-04-10 17:44:33.314 [Test worker] INFO  com.example.demo.ZuulApplicationTests - Started ZuulApplicationTests in 61.016 seconds (JVM running for 72.176)
+2020-04-10 17:44:46.268 [SpringContextShutdownHook] INFO  o.s.cloud.netflix.zuul.ZuulFilterInitializer - Stopping filter initializer
+2020-04-10 17:44:46.270 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'catalogWatchTaskScheduler'
+2020-04-10 17:44:46.275 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'

@@ -1,0 +1,24 @@
+更换为eureka：
+一、加入依赖：
+	implementation 'org.springframework.cloud:spring-cloud-starter-consul-discovery'
+	
+二、加入注解：
+@EnableDiscoveryClient
+
+三、加入配置：
+spring:
+  cloud:
+    consul: 
+      host: 192.168.56.28
+      port: 8500
+      discovery:
+        acl-token: 47eca91b-a5e7-e82d-6424-dba7637e0737
+        register: true
+        hostname: 192.168.56.1
+        serviceName: ${spring.application.name}
+        instance-id: ${spring.application.name}-${server.port}-${spring.cloud.consul.discovery.hostname}
+        healthCheckInterval: 15s
+
+四、
+instance-id 可选新值: ${spring.application.name}-${server.port}-${random.int(1000,1999)}
+instance-id: ${spring.application.name}-${server.port}-${spring.cloud.consul.discovery.hostname}

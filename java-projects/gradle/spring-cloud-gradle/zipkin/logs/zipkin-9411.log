@@ -1,0 +1,75 @@
+
+                  oo
+                 oooo
+                oooooo
+               oooooooo
+              oooooooooo
+             oooooooooooo
+           ooooooo  ooooooo
+          oooooo     ooooooo
+         oooooo       ooooooo
+        oooooo   o  o   oooooo
+       oooooo   oo  oo   oooooo
+     ooooooo  oooo  oooo  ooooooo
+    oooooo   ooooo  ooooo  ooooooo
+   oooooo   oooooo  oooooo  ooooooo
+  oooooooo      oo  oo      oooooooo
+  ooooooooooooo oo  oo ooooooooooooo
+      oooooooooooo  oooooooooooo
+          oooooooo  oooooooo
+              oooo  oooo
+
+     ________ ____  _  _____ _   _
+    |__  /_ _|  _ \| |/ /_ _| \ | |
+      / / | || |_) | ' / | ||  \| |
+     / /_ | ||  __/| . \ | || |\  |
+    |____|___|_|   |_|\_\___|_| \_|
+
+:: version 2.19.3 :: commit 2f38553 ::
+
+2020-04-10 18:38:43.916  INFO 1488 --- [           main] z.s.ZipkinServer                         : Starting ZipkinServer on Richy-PC with PID 1488 (D:\code-repository\java\project\branchs\develop\gradle\spring-cloud-gradle\zipkin\zipkin-server-2.19.3-exec.jar started by Richy in D:\code-repository\java\project\branchs\develop\gradle\spring-cloud-gradle\zipkin)
+2020-04-10 18:38:43.923  INFO 1488 --- [           main] z.s.ZipkinServer                         : The following profiles are active: shared
+2020-04-10 18:38:46.275  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.verboseExceptions: rate-limit=10 (default)
+2020-04-10 18:38:46.294  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.verboseSocketExceptions: false (default)
+2020-04-10 18:38:46.294  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.verboseResponses: false (default)
+2020-04-10 18:38:46.306  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.useEpoll: false (default)
+2020-04-10 18:38:46.306  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.dumpOpenSslInfo: false (default)
+2020-04-10 18:38:46.307  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.maxNumConnections: 2147483647 (default)
+2020-04-10 18:38:46.308  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.numCommonWorkers: 8 (default)
+2020-04-10 18:38:46.308  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.numCommonBlockingTaskThreads: 200 (default)
+2020-04-10 18:38:46.310  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.defaultMaxRequestLength: 10485760 (default)
+2020-04-10 18:38:46.310  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.defaultMaxResponseLength: 10485760 (default)
+2020-04-10 18:38:46.310  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.defaultRequestTimeoutMillis: 10000 (default)
+2020-04-10 18:38:46.311  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.defaultResponseTimeoutMillis: 15000 (default)
+2020-04-10 18:38:46.311  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.defaultConnectTimeoutMillis: 3200 (default)
+2020-04-10 18:38:46.312  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.defaultWriteTimeoutMillis: 1000 (default)
+2020-04-10 18:38:46.313  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.defaultServerIdleTimeoutMillis: 15000 (default)
+2020-04-10 18:38:46.316  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.defaultClientIdleTimeoutMillis: 10000 (default)
+2020-04-10 18:38:46.320  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.defaultHttp2InitialConnectionWindowSize: 1048576 (default)
+2020-04-10 18:38:46.322  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.defaultHttp2InitialStreamWindowSize: 1048576 (default)
+2020-04-10 18:38:46.323  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.defaultHttp2MaxFrameSize: 16384 (default)
+2020-04-10 18:38:46.324  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.defaultHttp2MaxStreamsPerConnection: 2147483647 (default)
+2020-04-10 18:38:46.325  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.defaultHttp2MaxHeaderListSize: 8192 (default)
+2020-04-10 18:38:46.325  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.defaultHttp1MaxInitialLineLength: 4096 (default)
+2020-04-10 18:38:46.326  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.defaultHttp1MaxHeaderSize: 8192 (default)
+2020-04-10 18:38:46.326  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.defaultHttp1MaxChunkSize: 8192 (default)
+2020-04-10 18:38:46.326  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.defaultUseHttp2Preface: true (default)
+2020-04-10 18:38:46.327  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.defaultUseHttp1Pipelining: false (default)
+2020-04-10 18:38:46.327  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.defaultBackoffSpec: exponential=200:10000,jitter=0.2 (default)
+2020-04-10 18:38:46.330  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.defaultMaxTotalAttempts: 10 (default)
+2020-04-10 18:38:46.337  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.routeCache: maximumSize=4096 (default)
+2020-04-10 18:38:46.338  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.routeDecoratorCache: maximumSize=4096 (default)
+2020-04-10 18:38:46.341  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.compositeServiceCache: maximumSize=256 (default)
+2020-04-10 18:38:46.342  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.parsedPathCache: maximumSize=4096 (default)
+2020-04-10 18:38:46.342  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.headerValueCache: maximumSize=4096 (default)
+2020-04-10 18:38:46.342  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.fileServiceCache: maximumSize=1024 (default)
+2020-04-10 18:38:46.343  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.cachedHeaders: :authority,:scheme,:method,accept-encoding,content-type (default)
+2020-04-10 18:38:46.345  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.annotatedServiceExceptionVerbosity: unhandled (default)
+2020-04-10 18:38:46.352  INFO 1488 --- [           main] c.l.a.c.Flags                            : com.linecorp.armeria.useJdkDnsResolver: false (default)
+2020-04-10 18:38:46.361  INFO 1488 --- [           main] c.l.a.c.Flags                            : /dev/epoll not available: java.lang.IllegalStateException: Only supported on Linux
+2020-04-10 18:38:47.197  INFO 1488 --- [           main] c.l.a.s.d.DocStringExtractor             : Using com.linecorp.armeria.thrift.jsonDir: META-INF/armeria/thrift
+2020-04-10 18:38:47.325  INFO 1488 --- [           main] c.l.a.c.u.SystemInfo                     : Hostname: richy-pc (from 'hostname' command)
+2020-04-10 18:38:48.678  INFO 1488 --- [oss-http-*:9411] c.l.a.s.Server                           : Serving HTTP at /0:0:0:0:0:0:0:0:9411 - http://127.0.0.1:9411/
+2020-04-10 18:38:48.689  INFO 1488 --- [           main] c.l.a.s.ArmeriaAutoConfiguration         : Armeria server started at ports: {/0:0:0:0:0:0:0:0:9411=ServerPort(/0:0:0:0:0:0:0:0:9411, [http])}
+2020-04-10 18:38:48.728  INFO 1488 --- [           main] z.s.ZipkinServer                         : Started ZipkinServer in 6.439 seconds (JVM running for 9.285)
+^C

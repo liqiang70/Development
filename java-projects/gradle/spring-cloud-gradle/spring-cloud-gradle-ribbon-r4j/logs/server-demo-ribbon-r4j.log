@@ -1,0 +1,74 @@
+2020-04-10 17:52:21.921 [Test worker] INFO  com.example.demo.RibbonR4jApplicationTests - The following profiles are active: dev
+2020-04-10 17:52:25.613 [Test worker] INFO  i.g.resilience4j.utils.RxJava2OnClasspathCondition - RxJava2 related Aspect extensions are not activated, because RxJava2 is not on the classpath.
+2020-04-10 17:52:25.616 [Test worker] INFO  i.g.resilience4j.utils.ReactorOnClasspathCondition - Reactor related Aspect extensions are not activated because Resilience4j Reactor module is not on the classpath.
+2020-04-10 17:52:25.641 [Test worker] INFO  i.g.resilience4j.utils.RxJava2OnClasspathCondition - RxJava2 related Aspect extensions are not activated, because RxJava2 is not on the classpath.
+2020-04-10 17:52:25.643 [Test worker] INFO  i.g.resilience4j.utils.ReactorOnClasspathCondition - Reactor related Aspect extensions are not activated because Resilience4j Reactor module is not on the classpath.
+2020-04-10 17:52:26.079 [Test worker] INFO  i.g.resilience4j.utils.RxJava2OnClasspathCondition - RxJava2 related Aspect extensions are not activated, because RxJava2 is not on the classpath.
+2020-04-10 17:52:26.080 [Test worker] INFO  i.g.resilience4j.utils.ReactorOnClasspathCondition - Reactor related Aspect extensions are not activated because Resilience4j Reactor module is not on the classpath.
+2020-04-10 17:52:26.111 [Test worker] INFO  i.g.resilience4j.utils.RxJava2OnClasspathCondition - RxJava2 related Aspect extensions are not activated, because RxJava2 is not on the classpath.
+2020-04-10 17:52:26.113 [Test worker] INFO  i.g.resilience4j.utils.ReactorOnClasspathCondition - Reactor related Aspect extensions are not activated because Resilience4j Reactor module is not on the classpath.
+2020-04-10 17:52:26.309 [Test worker] INFO  i.g.resilience4j.utils.RxJava2OnClasspathCondition - RxJava2 related Aspect extensions are not activated, because RxJava2 is not on the classpath.
+2020-04-10 17:52:26.310 [Test worker] INFO  i.g.resilience4j.utils.ReactorOnClasspathCondition - Reactor related Aspect extensions are not activated because Resilience4j Reactor module is not on the classpath.
+2020-04-10 17:52:27.351 [Test worker] WARN  o.springframework.boot.actuate.endpoint.EndpointId - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-10 17:52:27.967 [Test worker] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=8342cb19-420e-3aed-8922-a5ed941bfd31
+2020-04-10 17:52:32.945 [Test worker] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-04-10 17:52:32.956 [Test worker] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-10 17:52:33.014 [Test worker] INFO  com.netflix.config.DynamicPropertyFactory - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@210be77d
+2020-04-10 17:52:47.587 [Test worker] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 29 endpoint(s) beneath base path '/actuator'
+2020-04-10 17:52:48.642 [Test worker] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-10 17:52:49.406 [Test worker] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-04-10 17:52:49.407 [Test worker] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-10 17:52:50.770 [Test worker] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-10 17:52:54.826 [Test worker] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-04-10 17:52:55.094 [Test worker] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'catalogWatchTaskScheduler'
+2020-04-10 17:52:55.319 [Test worker] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-04-10 17:52:55.368 [Test worker] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-04-10 17:52:55.664 [Test worker] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-04-10 17:52:56.039 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: helloUsingGET_1
+2020-04-10 17:52:56.052 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: hello_errorUsingGET_1
+2020-04-10 17:52:56.061 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: usersUsingGET_1
+2020-04-10 17:52:56.099 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_1
+2020-04-10 17:52:56.103 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_2
+2020-04-10 17:52:56.110 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_3
+2020-04-10 17:52:56.121 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_4
+2020-04-10 17:52:56.131 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_5
+2020-04-10 17:52:56.142 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_6
+2020-04-10 17:52:56.149 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingDELETE_1
+2020-04-10 17:52:56.154 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_7
+2020-04-10 17:52:56.159 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_8
+2020-04-10 17:52:56.162 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_9
+2020-04-10 17:52:56.165 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_10
+2020-04-10 17:52:56.168 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_11
+2020-04-10 17:52:56.171 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_12
+2020-04-10 17:52:56.174 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_13
+2020-04-10 17:52:56.184 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_14
+2020-04-10 17:52:57.619 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_15
+2020-04-10 17:52:57.628 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_16
+2020-04-10 17:52:57.632 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_17
+2020-04-10 17:52:57.656 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_18
+2020-04-10 17:52:57.662 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_19
+2020-04-10 17:52:57.669 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_20
+2020-04-10 17:52:57.675 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_21
+2020-04-10 17:52:57.682 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_22
+2020-04-10 17:52:57.694 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_23
+2020-04-10 17:52:57.699 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_24
+2020-04-10 17:52:57.708 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_25
+2020-04-10 17:52:57.720 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_26
+2020-04-10 17:52:57.725 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_27
+2020-04-10 17:52:57.730 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_28
+2020-04-10 17:52:57.734 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_29
+2020-04-10 17:52:57.738 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_30
+2020-04-10 17:52:57.742 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_31
+2020-04-10 17:52:57.745 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_32
+2020-04-10 17:52:57.749 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingPOST_1
+2020-04-10 17:52:57.754 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_33
+2020-04-10 17:52:57.759 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_34
+2020-04-10 17:52:57.767 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_35
+2020-04-10 17:52:57.771 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_36
+2020-04-10 17:52:57.786 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_37
+2020-04-10 17:52:57.794 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_38
+2020-04-10 17:52:57.800 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingPOST_2
+2020-04-10 17:52:57.805 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_39
+2020-04-10 17:52:57.898 [Test worker] INFO  com.example.demo.RibbonR4jApplicationTests - Started RibbonR4jApplicationTests in 53.423 seconds (JVM running for 67.325)
+2020-04-10 17:52:58.796 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'catalogWatchTaskScheduler'
+2020-04-10 17:52:58.849 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'

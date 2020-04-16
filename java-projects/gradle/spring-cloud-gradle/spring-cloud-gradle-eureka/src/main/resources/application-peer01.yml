@@ -1,0 +1,52 @@
+spring:
+  application:
+    name: springcloud-eureka
+
+  boot:
+    admin:
+      client:
+        instance:
+          service-base-url: http://localhost:8769
+
+server:
+  #指定服务端口
+  port: 8761
+
+eureka:
+  #server一定程度上也是client，互为client，
+  client:
+    #服务地址
+    service-url:
+      defaultZone: http://springcloud-eureka-02:8762/eureka/
+
+  server:
+    #避免自我保护模式告警
+    renewalPercentThreshold: 0.49
+    eviction-interval-timer-in-ms: 5000
+
+  instance:
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 15
+    
+logging:
+   file: ./logs/server-${spring.application.name}.log
+   
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+info:
+  app:
+    name: ${spring.application.name}-${server.port}
+  company:
+    name: example.com
+  build:
+    group: com.example.springcloud
+    artifactId: spring-cloud-gradle-eureka
+    version: 0.0.1-SNAPSHOT

@@ -1,0 +1,54 @@
+2020-04-10 17:45:06.560 [Test worker] INFO  com.example.demo.Oauth2ClientUserApplicationTests - The following profiles are active: dev
+2020-04-10 17:45:13.809 [Test worker] WARN  o.springframework.boot.actuate.endpoint.EndpointId - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-10 17:45:14.309 [Test worker] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=f0d971cd-714f-3ac3-8fa0-af0a296fd957
+2020-04-10 17:45:15.150 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-10 17:45:15.179 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-10 17:45:15.199 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6c41f3e2' of type [org.springframework.security.oauth2.provider.expression.OAuth2MethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-10 17:45:15.223 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-10 17:45:15.243 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-10 17:45:16.889 [Test worker] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-04-10 17:45:16.891 [Test worker] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-10 17:45:16.925 [Test worker] INFO  com.netflix.config.DynamicPropertyFactory - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@3b663941
+2020-04-10 17:45:22.125 [Test worker] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 20 endpoint(s) beneath base path '/actuator'
+2020-04-10 17:45:23.141 [Test worker] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-10 17:45:23.713 [Test worker] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-04-10 17:45:23.714 [Test worker] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-10 17:45:25.128 [Test worker] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-10 17:45:26.314 [Test worker] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 7b7e111c-6ac3-4550-9646-0717ab5bc932
+
+2020-04-10 17:45:27.605 [Test worker] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6ca8fac3, org.springframework.security.web.context.SecurityContextPersistenceFilter@1caad7e, org.springframework.security.web.header.HeaderWriterFilter@742384b6, org.springframework.security.web.authentication.logout.LogoutFilter@20ae5f60, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@7cddafd7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3a8afbee, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@eb22c56, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@14916bc7, org.springframework.security.web.session.SessionManagementFilter@1ee2fbd6, org.springframework.security.web.access.ExceptionTranslationFilter@53ab9890, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4720831a]
+2020-04-10 17:45:28.841 [Test worker] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-04-10 17:45:28.994 [Test worker] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'catalogWatchTaskScheduler'
+2020-04-10 17:45:29.146 [Test worker] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-04-10 17:45:29.191 [Test worker] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-04-10 17:45:29.297 [Test worker] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-04-10 17:45:30.431 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_1
+2020-04-10 17:45:30.437 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_2
+2020-04-10 17:45:30.451 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingDELETE_1
+2020-04-10 17:45:30.463 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_3
+2020-04-10 17:45:30.472 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_4
+2020-04-10 17:45:30.485 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_5
+2020-04-10 17:45:30.490 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_6
+2020-04-10 17:45:30.497 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_7
+2020-04-10 17:45:30.505 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_8
+2020-04-10 17:45:30.511 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_9
+2020-04-10 17:45:30.528 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_10
+2020-04-10 17:45:30.561 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_11
+2020-04-10 17:45:30.576 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_12
+2020-04-10 17:45:30.582 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_13
+2020-04-10 17:45:30.589 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_14
+2020-04-10 17:45:30.601 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_15
+2020-04-10 17:45:30.608 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_16
+2020-04-10 17:45:30.612 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_17
+2020-04-10 17:45:30.618 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_18
+2020-04-10 17:45:30.623 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_19
+2020-04-10 17:45:30.627 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingPOST_1
+2020-04-10 17:45:30.634 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_20
+2020-04-10 17:45:30.636 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_21
+2020-04-10 17:45:30.638 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingPOST_2
+2020-04-10 17:45:30.644 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_22
+2020-04-10 17:45:30.747 [Test worker] INFO  com.example.demo.Oauth2ClientUserApplicationTests - Started Oauth2ClientUserApplicationTests in 59.484 seconds (JVM running for 74.529)
+2020-04-10 17:45:32.713 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'catalogWatchTaskScheduler'
+2020-04-10 17:45:32.721 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'

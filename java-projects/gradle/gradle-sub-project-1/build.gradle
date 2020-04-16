@@ -1,0 +1,46 @@
+plugins {
+    id 'java-library'
+    id 'maven' //引入maven插件
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // This dependency is exported to consumers, that is to say found on their compile classpath.
+    api 'org.apache.commons:commons-math3:3.6.1'
+
+    // This dependency is used internally, and not exposed to consumers on their own compile classpath.
+    implementation 'com.google.guava:guava:28.0-jre'
+
+    // Use JUnit test framework
+    testImplementation 'junit:junit:4.12'
+}
+
+// 指定上传的路径
+//def localMavenRepo = 'file://F:/Maven/repo/m2'
+def nexusMavenRepo = 'http://192.168.56.25:8081/repository/demo-snapshots/'
+
+// 上传Task，Gradle会生成并上传pom.xml文件。
+uploadArchives {
+    repositories {
+        mavenDeployer {
+			//repository(url: localMavenRepo)
+			repository(url: nexusMavenRepo) {
+	        	authentication(userName: 'demo-deployer', password: '123456')
+			}
+
+            //构造项目的Pom文件
+            pom.project {
+                name = project.name
+                packaging = 'jar'
+                description = 'description'
+            }
+        }
+    }
+}

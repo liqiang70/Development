@@ -1,0 +1,4 @@
+	implementation "org.springframework.cloud:spring-cloud-starter-sleuth"
+	implementation "net.logstash.logback:logstash-logback-encoder:${logstashlogbackVersion}"
+	implementation "org.springframework.cloud:spring-cloud-starter-zipkin"
+	implementation "org.springframework.amqp:spring-rabbit"

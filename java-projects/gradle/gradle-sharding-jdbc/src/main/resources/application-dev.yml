@@ -1,0 +1,89 @@
+server:
+  port: 9100
+
+spring:
+  application:
+    name: sharding-jdbc
+
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java, src/main/resources
+
+
+  shardingsphere:
+    datasource:
+      names: ds0,ds1
+      # 这是数据源0的配置
+      ds0:
+        type: com.zaxxer.hikari.HikariDataSource
+        jdbc-url: jdbc:mysql://192.168.56.22:3306/ds_0?serverTimezone=GMT%2B8
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        username: root
+        password: 123456
+
+      # 这是数据源1的配置
+      ds1:
+        type: com.zaxxer.hikari.HikariDataSource
+        jdbc-url: jdbc:mysql://192.168.56.22:3306/ds_1?serverTimezone=GMT%2B8
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        username: root
+        password: 123456
+
+
+    # 分库策略
+    # 分库的列是user_id
+    sharding:
+      default-database-strategy:
+        standard:
+          sharding-column: user_id
+          precise-algorithm-class-name: com.example.demo.sharding.config.PreciseShardingAlgorithmImpl
+
+      # 分表策略
+      tables:
+        t_order:
+          actual-data-nodes: ds$->{0..1}.t_order$->{0..1}
+          table-strategy:
+            inline:
+              sharding-column: order_id
+              algorithm-expression: t_order$->{order_id % 2}
+          key-generator:
+            column: order_id
+            type: SNOWFLAKE
+
+        t_order_item:
+          actual-data-nodes: ds$->{0..1}.t_order_item$->{0..1}
+          table-strategy:
+            inline:
+              sharding-column: order_id
+              algorithm-expression: t_order_item$->{order_id % 2}
+
+        t_config:
+          actual-data-nodes: ds$->{0}.t_config
+
+      # 如果有关联表没配置绑定，有可能会出现笛卡尔积
+      binding-tables: t_order, t_order_item
+      # 广播表, 其主节点是ds0
+      broadcast-tables: t_config
+
+mybatis-plus:
+  mapper-locations: mapper/*.xml
+  global-config:
+    db-config:
+      # 主键策略
+      id-type: none
+      # 表名前缀
+      table-prefix: t_
+      # 表名是否使用下划线间隔，默认：是
+      table-underline: true
+      logic-not-delete-value: 0
+      logic-delete-value: 1
+
+logging:
+  file: logs/sys.log
+  level:
+    com:
+      example:
+        demo:
+          mybatisplus:
+            dao: debug

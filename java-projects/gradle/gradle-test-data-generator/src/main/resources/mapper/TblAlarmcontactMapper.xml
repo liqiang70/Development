@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.TblAlarmcontactMapper">
+  <resultMap id="BaseResultMap" type="com.example.demo.model.TblAlarmcontact">
+    <result column="uiduserid" jdbcType="VARCHAR" property="uiduserid" />
+    <result column="icontacttype" jdbcType="INTEGER" property="icontacttype" />
+    <result column="strcontactnumber" jdbcType="VARCHAR" property="strcontactnumber" />
+  </resultMap>
+  <insert id="insert" parameterType="com.example.demo.model.TblAlarmcontact">
+    insert into tbl_alarmcontact (uiduserid, icontacttype, strcontactnumber
+      )
+    values (#{uiduserid,jdbcType=VARCHAR}, #{icontacttype,jdbcType=INTEGER}, #{strcontactnumber,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.demo.model.TblAlarmcontact">
+    insert into tbl_alarmcontact
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="uiduserid != null">
+        uiduserid,
+      </if>
+      <if test="icontacttype != null">
+        icontacttype,
+      </if>
+      <if test="strcontactnumber != null">
+        strcontactnumber,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="uiduserid != null">
+        #{uiduserid,jdbcType=VARCHAR},
+      </if>
+      <if test="icontacttype != null">
+        #{icontacttype,jdbcType=INTEGER},
+      </if>
+      <if test="strcontactnumber != null">
+        #{strcontactnumber,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>

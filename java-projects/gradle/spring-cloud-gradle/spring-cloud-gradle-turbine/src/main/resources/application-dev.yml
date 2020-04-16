@@ -1,0 +1,52 @@
+server:
+  port: 8030
+
+spring:
+  application:
+     name: demo-turbine
+
+  boot:
+    admin:
+      client:
+        instance:
+          service-base-url: http://localhost:8769
+
+  cloud:
+    consul: 
+      host: 192.168.56.28
+      port: 8500
+      discovery:
+        acl-token: 47eca91b-a5e7-e82d-6424-dba7637e0737
+        register: true
+        hostname: 192.168.56.1
+        serviceName: ${spring.application.name}
+        instance-id: ${spring.application.name}-${server.port}-${spring.cloud.consul.discovery.hostname}
+        healthCheckInterval: 15s
+
+turbine:
+  app-config: demo-ribbon-customer,demo-feign-customer
+  cluster-name-expression: new String("default")
+  combine-host-port: true
+  
+logging:
+   file: ./logs/server-${spring.application.name}.log
+   
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+info:
+  app:
+    name: ${spring.application.name}-${server.port}
+  company:
+    name: example.com
+  build:
+    group: com.example.springcloud
+    artifactId: spring-cloud-gradle-turbine
+    version: 0.0.1-SNAPSHOT

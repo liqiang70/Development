@@ -1,0 +1,45 @@
+2020-04-10 17:45:36.537 [Test worker] INFO  com.example.demo.ConfigApplicationTests - The following profiles are active: jdbc
+2020-04-10 17:45:38.256 [Test worker] WARN  o.springframework.boot.actuate.endpoint.EndpointId - Endpoint ID 'bus-env' contains invalid characters, please migrate to a valid format.
+2020-04-10 17:45:39.124 [Test worker] WARN  o.springframework.boot.actuate.endpoint.EndpointId - Endpoint ID 'bus-refresh' contains invalid characters, please migrate to a valid format.
+2020-04-10 17:45:39.284 [Test worker] WARN  o.springframework.boot.actuate.endpoint.EndpointId - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-10 17:45:39.861 [Test worker] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=abb2352b-bea0-309a-b81a-d440c5cac6aa
+2020-04-10 17:45:40.367 [Test worker] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-04-10 17:45:40.426 [Test worker] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-04-10 17:45:40.438 [Test worker] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-04-10 17:45:40.788 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$36772131] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-10 17:45:41.304 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-10 17:45:41.329 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-10 17:45:41.407 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-10 17:45:42.389 [Test worker] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-04-10 17:45:42.390 [Test worker] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-10 17:45:42.424 [Test worker] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-04-10 17:45:42.425 [Test worker] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-10 17:45:43.604 [Test worker] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-10 17:45:45.247 [Test worker] INFO  o.s.c.s.f.FunctionConfiguration$FunctionBindingRegistrar - Functional binding is disabled due to the presense of @EnableBinding annotation in your configuration
+2020-04-10 17:45:45.336 [Test worker] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-04-10 17:45:51.453 [Test worker] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-04-10 17:45:52.005 [Test worker] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'catalogWatchTaskScheduler'
+2020-04-10 17:45:52.118 [Test worker] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 25 endpoint(s) beneath base path '/actuator'
+2020-04-10 17:45:52.899 [Test worker] INFO  o.s.c.stream.messaging.DirectWithAttributesChannel - Channel 'application-1.springCloudBusInput' has 1 subscriber(s).
+2020-04-10 17:45:52.949 [Test worker] INFO  o.s.integration.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-04-10 17:45:52.950 [Test worker] INFO  o.s.integration.channel.PublishSubscribeChannel - Channel 'application-1.errorChannel' has 1 subscriber(s).
+2020-04-10 17:45:52.950 [Test worker] INFO  o.s.integration.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+2020-04-10 17:45:55.915 [Test worker] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [192.168.56.26:5672]
+2020-04-10 17:45:56.379 [Test worker] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#2099bd39:0/SimpleConnection@64a579c0 [delegate=amqp://rabbit@192.168.56.26:5672/, localPort= 60806]
+2020-04-10 17:45:56.473 [Test worker] INFO  o.s.c.stream.messaging.DirectWithAttributesChannel - Channel 'application-1.springCloudBusOutput' has 1 subscriber(s).
+2020-04-10 17:45:56.612 [Test worker] INFO  o.s.c.s.b.r.p.RabbitExchangeQueueProvisioner - declaring queue for inbound: springCloudBus.anonymous.K47jijptRB2QianDAP2uVw, bound to: springCloudBus
+2020-04-10 17:45:56.730 [Test worker] INFO  o.s.cloud.stream.binder.BinderErrorChannel - Channel 'springCloudBus.anonymous.K47jijptRB2QianDAP2uVw.errors' has 1 subscriber(s).
+2020-04-10 17:45:56.731 [Test worker] INFO  o.s.cloud.stream.binder.BinderErrorChannel - Channel 'springCloudBus.anonymous.K47jijptRB2QianDAP2uVw.errors' has 2 subscriber(s).
+2020-04-10 17:45:56.851 [Test worker] INFO  o.s.i.amqp.inbound.AmqpInboundChannelAdapter - started bean 'inbound.springCloudBus.anonymous.K47jijptRB2QianDAP2uVw'
+2020-04-10 17:45:57.053 [Test worker] INFO  com.example.demo.ConfigApplicationTests - Started ConfigApplicationTests in 31.726 seconds (JVM running for 38.975)
+2020-04-10 17:45:57.966 [SpringContextShutdownHook] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2020-04-10 17:45:57.980 [SpringContextShutdownHook] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2020-04-10 17:45:57.981 [SpringContextShutdownHook] INFO  o.s.i.amqp.inbound.AmqpInboundChannelAdapter - stopped bean 'inbound.springCloudBus.anonymous.K47jijptRB2QianDAP2uVw'
+2020-04-10 17:45:57.991 [SpringContextShutdownHook] INFO  o.s.cloud.stream.binder.BinderErrorChannel - Channel 'application-1.springCloudBus.anonymous.K47jijptRB2QianDAP2uVw.errors' has 1 subscriber(s).
+2020-04-10 17:45:57.993 [SpringContextShutdownHook] INFO  o.s.cloud.stream.binder.BinderErrorChannel - Channel 'application-1.springCloudBus.anonymous.K47jijptRB2QianDAP2uVw.errors' has 0 subscriber(s).
+2020-04-10 17:45:57.999 [SpringContextShutdownHook] INFO  o.s.integration.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-04-10 17:45:57.999 [SpringContextShutdownHook] INFO  o.s.integration.channel.PublishSubscribeChannel - Channel 'application-1.errorChannel' has 0 subscriber(s).
+2020-04-10 17:45:57.999 [SpringContextShutdownHook] INFO  o.s.integration.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+2020-04-10 17:45:58.000 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'catalogWatchTaskScheduler'
+2020-04-10 17:45:58.028 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2020-04-10 17:45:58.030 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'

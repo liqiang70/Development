@@ -1,0 +1,57 @@
+
+POST /oauth/authorize  授权码模式认证授权接口
+GET/POST /oauth/token  获取 token 的接口
+POST  /oauth/check_token  检查 token 合法性接口
+
+
+方法1：cmd窗口：
+curl -i -X POST -d "username=admin&password=123456&grant_type=password&client_id=user-client&client_secret=user-secret-8888" http://localhost:8093/oauth/token
+
+方法2：功能同上，以下用于postman：
+http://localhost:8093/oauth/token?username=admin&password=123456&grant_type=password&client_id=user-client&client_secret=user-secret-8888 
+
+-------------------------redis---------------------------
+
+成功
+http://localhost:8093/oauth/check_token?token=2bac66a2-1bbd-4138-a29b-aad334f92692
+Authorization: Basic dXNlci1jbGllbnQ6dXNlci1zZWNyZXQtODg4OA==
+
+失败
+http://localhost:8093/oauth/check_token?client_id=user-client&client_secret=user-secret-8888&token=2bac66a2-1bbd-4138-a29b-aad334f92692
+
+成功
+http://localhost:8093/oauth/token?grant_type=refresh_token&refresh_token=e28ff1af-0a69-4faa-bffe-e7f4537fbdf5
+Authorization: Basic dXNlci1jbGllbnQ6dXNlci1zZWNyZXQtODg4OA==
+
+成功
+http://localhost:8093/oauth/token?client_id=user-client&client_secret=user-secret-8888&grant_type=refresh_token&refresh_token=e28ff1af-0a69-4faa-bffe-e7f4537fbdf5
+
+
+--------------------------jwt----------------------------
+jwt格式解析
+http://jwt.calebb.net/
+
+Authorization格式
+Authorization格式依然是 Basic + 空格 + base64(client-id:client-secret)
+user-client:user-secret-8888
+
+https://www.sojson.com/base64.html
+Authorization: Basic dXNlci1jbGllbnQ6dXNlci1jbGllbnQtODg4OA==
+
+check_token:jwt:
+以下方式失败
+http://localhost:8093/oauth/check_token?client_id=user-client&client_secret=user-secret-8888&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbiIsImp3dC1leHQiOiJKV1Qg5omp5bGV5L-h5oGvIiwic2NvcGUiOlsiYWxsIl0sImV4cCI6MTU4Mzg1NzQ5NSwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJqdGkiOiJmYjVhMTY0OS04ODMzLTQzMjItYTE3NS0wZTcyMThmN2IwZGEiLCJjbGllbnRfaWQiOiJ1c2VyLWNsaWVudCJ9.HtAejPETJXRACot8jsbPk3x1PjT8TKyX69oQ_xl_gA8 
+
+以下方式成功！
+http://localhost:8093/oauth/check_token?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbiIsImp3dC1leHQiOiJKV1Qg5omp5bGV5L-h5oGvIiwic2NvcGUiOlsiYWxsIl0sImV4cCI6MTU4Mzg1NzQ5NSwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJqdGkiOiJmYjVhMTY0OS04ODMzLTQzMjItYTE3NS0wZTcyMThmN2IwZGEiLCJjbGllbnRfaWQiOiJ1c2VyLWNsaWVudCJ9.HtAejPETJXRACot8jsbPk3x1PjT8TKyX69oQ_xl_gA8 
+Authorization: Basic dXNlci1jbGllbnQ6dXNlci1jbGllbnQtODg4OA==
+
+refresh_token:jwt：
+以下方式成功！
+http://localhost:8093/oauth/token?client_id=user-client&client_secret=user-secret-8888&grant_type=refresh_token&refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbiIsImp3dC1leHQiOiJKV1Qg5omp5bGV5L-h5oGvIiwic2NvcGUiOlsiYWxsIl0sImF0aSI6IjljNjJhYWMwLWUzODYtNDc2OS1iMTY3LTZkY2Y2Mzk4NGM3MSIsImV4cCI6MTU4NjQ0MTU0MSwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJqdGkiOiIwZTY2N2I4MC05OWY1LTQ4NjUtYWNmZi1hZDY1ODE3MDNlMmYiLCJjbGllbnRfaWQiOiJ1c2VyLWNsaWVudCJ9.kBUpJWRnJ6iJ5o20MqAoGbX0mrPat_s7AVB5l_8vzZY
+
+以下方式成功！
+http://localhost:8093/oauth/token?grant_type=refresh_token&refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbiIsImp3dC1leHQiOiJKV1Qg5omp5bGV5L-h5oGvIiwic2NvcGUiOlsiYWxsIl0sImF0aSI6IjljNjJhYWMwLWUzODYtNDc2OS1iMTY3LTZkY2Y2Mzk4NGM3MSIsImV4cCI6MTU4NjQ0MTU0MSwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJqdGkiOiIwZTY2N2I4MC05OWY1LTQ4NjUtYWNmZi1hZDY1ODE3MDNlMmYiLCJjbGllbnRfaWQiOiJ1c2VyLWNsaWVudCJ9.kBUpJWRnJ6iJ5o20MqAoGbX0mrPat_s7AVB5l_8vzZY
+Authorization: Basic dXNlci1jbGllbnQ6dXNlci1jbGllbnQtODg4OA==
+
+

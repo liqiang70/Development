@@ -1,0 +1,11 @@
+/* 子模块项目名，jar名 */
+archivesBaseName = "spring-cloud-gradle-ribbon-r4j"
+
+dependencies {
+	implementation "org.springframework.boot:spring-boot-starter-web"
+	implementation "org.springframework.cloud:spring-cloud-starter-consul-discovery"
+	implementation "io.github.resilience4j:resilience4j-spring-boot2:1.1.0"
+	implementation "io.github.resilience4j:resilience4j-timelimiter:1.1.0"
+	implementation "io.micrometer:micrometer-registry-prometheus"
+}
+

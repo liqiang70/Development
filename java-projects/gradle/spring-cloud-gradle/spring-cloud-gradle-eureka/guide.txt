@@ -1,0 +1,17 @@
+--单机
+http://127.0.0.1:8761/
+
+cd build\libs
+java -jar -Xms128m -Xmx512m -XX:PermSize=128m -XX:MaxPermSize=512m spring-cloud-gradle-eureka-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev --server.port=8761 > spring-cloud-gradle-eureka-8761.log 2>&1 
+
+
+--双机
+http://springcloud-eureka-01:8761/
+http://springcloud-eureka-02:8762/
+
+cd build\libs
+java -jar -Xms128m -Xmx512m -XX:PermSize=128m -XX:MaxPermSize=512m spring-cloud-gradle-eureka-0.0.1-SNAPSHOT.jar --spring.profiles.active=peer01 --server.port=8761 > spring-cloud-gradle-eureka-8761.log 2>&1 
+
+
+cd build\libs
+java -jar -Xms128m -Xmx512m -XX:PermSize=128m -XX:MaxPermSize=512m spring-cloud-gradle-eureka-0.0.1-SNAPSHOT.jar --spring.profiles.active=peer02 --server.port=8762 > spring-cloud-gradle-eureka-8762.log 2>&1 

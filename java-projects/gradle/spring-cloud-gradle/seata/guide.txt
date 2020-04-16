@@ -1,0 +1,4 @@
+seata 不支持 consul acl，在配置consul时需关闭acl。
+
+需要更换mysql8的jar
+

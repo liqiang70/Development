@@ -1,0 +1,17 @@
+更换为eureka：
+一、加入依赖：
+implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+
+二、加入注解：
+@EnableEurekaClient
+
+三、加入配置：
+eureka:
+  client:
+    service-url:
+      defaultZone: http://springcloud-eureka-01:8761/eureka/,http://springcloud-eureka-02:8762/eureka/
+    healthcheck.enabled: true
+  instance:
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 15
+

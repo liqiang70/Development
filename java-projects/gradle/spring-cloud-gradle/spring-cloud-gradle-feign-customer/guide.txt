@@ -1,0 +1,25 @@
+
+http://127.0.0.1:8055/feign/hello
+
+http://127.0.0.1:8055/feign/greet/test
+
+http://127.0.0.1:8055/feign/users?ids=1,2,3
+
+
+#测试header请求，需添加header， name=this is my name
+http://127.0.0.1:8055/feign/headers
+
+http://127.0.0.1:8055/feign/requestBody  (post only)
+{"name":"tom","sex":"male","phone":"13823355231"}
+
+
+#继承服务接口
+http://127.0.0.1:8055/feign/refactor/tom_jerry
+ServiceProviderFeign中包含两种使用方法。不推荐extend接口的方式，维护会复杂。
+
+
+http://127.0.0.1:8055/feign/retry
+
+#retry机制研究
+http://127.0.0.1:8055/feign_retry
+

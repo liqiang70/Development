@@ -1,0 +1,1 @@
+cd ..\build\libs && java -jar -Xms128m -Xmx512m -XX:PermSize=128m -XX:MaxPermSize=512m spring-cloud-gradle-hystrix-dashboard-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev --server.port=8020 --spring.cloud.consul.discovery.hostname=192.168.56.1 > spring-cloud-gradle-hystrix-dashboard-8020.log 2>&1 

@@ -1,0 +1,198 @@
+2020-04-10 17:54:04.439 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$ed118c34] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-10 17:54:14.235 [Test worker] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2020-04-10 17:54:30.453 [Test worker] INFO  o.s.c.c.client.ConfigServicePropertySourceLocator - Fetching config from server at : http://192.168.56.1:8010/
+2020-04-10 17:54:58.672 [Test worker] INFO  o.s.c.c.client.ConfigServicePropertySourceLocator - Located environment: name=demo-task, profiles=[dev], label=master, version=null, state=null
+2020-04-10 17:54:58.700 [Test worker] INFO  com.example.demo.TaskApplicationTests - The following profiles are active: dev
+2020-04-10 17:55:01.621 [Test worker] WARN  o.springframework.boot.actuate.endpoint.EndpointId - Endpoint ID 'bus-env' contains invalid characters, please migrate to a valid format.
+2020-04-10 17:55:02.519 [Test worker] WARN  o.springframework.boot.actuate.endpoint.EndpointId - Endpoint ID 'bus-refresh' contains invalid characters, please migrate to a valid format.
+2020-04-10 17:55:02.646 [Test worker] WARN  o.springframework.boot.actuate.endpoint.EndpointId - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-10 17:55:03.771 [Test worker] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=529129a9-86f1-3afc-aece-076031879cf3
+2020-04-10 17:55:04.572 [Test worker] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-04-10 17:55:04.594 [Test worker] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-04-10 17:55:05.239 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$ed118c34] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-10 17:55:07.005 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-10 17:55:07.018 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-10 17:55:07.179 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-10 17:55:08.325 [Test worker] INFO  org.quartz.impl.StdSchedulerFactory - Using ConnectionProvider class 'org.quartz.utils.HikariCpPoolingConnectionProvider' for data source 'qzDS'
+2020-04-10 17:55:08.339 [Test worker] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-04-10 17:55:08.363 [Test worker] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: Test worker
+2020-04-10 17:55:08.391 [Test worker] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-04-10 17:55:08.392 [Test worker] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2020-04-10 17:55:08.394 [Test worker] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using db table-based data access locking (synchronization).
+2020-04-10 17:55:08.399 [Test worker] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2020-04-10 17:55:08.401 [Test worker] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'DefaultQuartzScheduler' with instanceId 'Richy-PC1586512508361'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is clustered.
+
+2020-04-10 17:55:08.403 [Test worker] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from an externally provided properties instance.
+2020-04-10 17:55:08.404 [Test worker] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2020-04-10 17:55:08.404 [Test worker] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: com.example.demo.quartz.MyJobFactory@32781ee6
+2020-04-10 17:55:10.228 [Test worker] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-04-10 17:55:10.228 [Test worker] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-10 17:55:10.269 [Test worker] INFO  com.netflix.config.DynamicPropertyFactory - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@330efe26
+2020-04-10 17:55:18.863 [Test worker] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-04-10 17:55:19.736 [Test worker] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 25 endpoint(s) beneath base path '/actuator'
+2020-04-10 17:55:20.322 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-04-10 17:55:21.109 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-04-10 17:55:21.758 [Test worker] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-10 17:55:22.355 [Test worker] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-04-10 17:55:22.356 [Test worker] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-10 17:55:22.881 [Test worker] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-10 17:55:24.399 [Test worker] INFO  o.s.c.s.f.FunctionConfiguration$FunctionBindingRegistrar - Functional binding is disabled due to the presense of @EnableBinding annotation in your configuration
+2020-04-10 17:55:26.370 [Test worker] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-04-10 17:55:27.748 [Test worker] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'catalogWatchTaskScheduler'
+2020-04-10 17:55:29.032 [Test worker] INFO  o.s.c.stream.messaging.DirectWithAttributesChannel - Channel 'demo-task-1.springCloudBusInput' has 1 subscriber(s).
+2020-04-10 17:55:29.157 [Test worker] INFO  o.s.integration.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-04-10 17:55:29.157 [Test worker] INFO  o.s.integration.channel.PublishSubscribeChannel - Channel 'demo-task-1.errorChannel' has 1 subscriber(s).
+2020-04-10 17:55:29.158 [Test worker] INFO  o.s.integration.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+2020-04-10 18:19:13.011 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$f349e434] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-10 18:19:17.498 [Test worker] INFO  o.s.c.c.client.ConfigServicePropertySourceLocator - Fetching config from server at : http://192.168.56.1:8010/
+2020-04-10 18:19:17.801 [Test worker] INFO  o.s.c.c.client.ConfigServicePropertySourceLocator - Located environment: name=demo-task, profiles=[dev], label=master, version=null, state=null
+2020-04-10 18:19:17.819 [Test worker] INFO  com.example.demo.TaskApplicationTests - The following profiles are active: dev
+2020-04-10 18:19:19.954 [Test worker] WARN  o.springframework.boot.actuate.endpoint.EndpointId - Endpoint ID 'bus-env' contains invalid characters, please migrate to a valid format.
+2020-04-10 18:19:20.874 [Test worker] WARN  o.springframework.boot.actuate.endpoint.EndpointId - Endpoint ID 'bus-refresh' contains invalid characters, please migrate to a valid format.
+2020-04-10 18:19:21.059 [Test worker] WARN  o.springframework.boot.actuate.endpoint.EndpointId - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-10 18:19:21.814 [Test worker] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=529129a9-86f1-3afc-aece-076031879cf3
+2020-04-10 18:19:22.520 [Test worker] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-04-10 18:19:22.550 [Test worker] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-04-10 18:19:22.861 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$f349e434] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-10 18:19:24.176 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-10 18:19:24.196 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-10 18:19:24.319 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-10 18:19:25.491 [Test worker] INFO  org.quartz.impl.StdSchedulerFactory - Using ConnectionProvider class 'org.quartz.utils.HikariCpPoolingConnectionProvider' for data source 'qzDS'
+2020-04-10 18:19:25.504 [Test worker] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-04-10 18:19:25.512 [Test worker] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: Test worker
+2020-04-10 18:19:25.559 [Test worker] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-04-10 18:19:25.559 [Test worker] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2020-04-10 18:19:25.562 [Test worker] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using db table-based data access locking (synchronization).
+2020-04-10 18:19:25.567 [Test worker] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2020-04-10 18:19:25.577 [Test worker] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'DefaultQuartzScheduler' with instanceId 'Richy-PC1586513965511'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is clustered.
+
+2020-04-10 18:19:25.577 [Test worker] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from an externally provided properties instance.
+2020-04-10 18:19:25.578 [Test worker] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2020-04-10 18:19:25.579 [Test worker] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: com.example.demo.quartz.MyJobFactory@d4d6d42
+2020-04-10 18:19:27.534 [Test worker] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-04-10 18:19:27.535 [Test worker] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-10 18:19:27.644 [Test worker] INFO  com.netflix.config.DynamicPropertyFactory - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@4cbc3821
+2020-04-10 18:19:32.430 [Test worker] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-04-10 18:19:33.446 [Test worker] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 25 endpoint(s) beneath base path '/actuator'
+2020-04-10 18:19:33.932 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-04-10 18:19:34.892 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-04-10 18:19:35.755 [Test worker] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-10 18:19:36.330 [Test worker] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-04-10 18:19:36.331 [Test worker] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-10 18:19:37.104 [Test worker] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-10 18:19:38.681 [Test worker] INFO  o.s.c.s.f.FunctionConfiguration$FunctionBindingRegistrar - Functional binding is disabled due to the presense of @EnableBinding annotation in your configuration
+2020-04-10 18:19:42.304 [Test worker] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-04-10 18:19:43.656 [Test worker] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'catalogWatchTaskScheduler'
+2020-04-10 18:19:44.833 [Test worker] INFO  o.s.c.stream.messaging.DirectWithAttributesChannel - Channel 'demo-task-1.springCloudBusInput' has 1 subscriber(s).
+2020-04-10 18:19:45.055 [Test worker] INFO  o.s.integration.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-04-10 18:19:45.055 [Test worker] INFO  o.s.integration.channel.PublishSubscribeChannel - Channel 'demo-task-1.errorChannel' has 1 subscriber(s).
+2020-04-10 18:19:45.056 [Test worker] INFO  o.s.integration.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+2020-04-10 18:19:47.266 [Test worker] INFO  o.s.c.c.client.ConfigServicePropertySourceLocator - Fetching config from server at : http://192.168.56.1:8010/
+2020-04-10 18:19:47.337 [Test worker] INFO  o.s.c.c.client.ConfigServicePropertySourceLocator - Located environment: name=demo-task, profiles=[dev], label=master, version=null, state=null
+2020-04-10 18:19:47.789 [Test worker] ERROR o.s.cloud.task.listener.TaskLifecycleListener - An event to end a task has been received for a task that has not yet started.
+2020-04-10 18:19:47.868 [Test worker] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [192.168.56.26:5672]
+2020-04-10 18:19:47.984 [Test worker] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#a8aaec4:0/SimpleConnection@fa7d5fb [delegate=amqp://rabbit@192.168.56.26:5672/, localPort= 64238]
+2020-04-10 18:19:48.060 [Test worker] INFO  o.s.c.stream.messaging.DirectWithAttributesChannel - Channel 'demo-task-1.task-events' has 1 subscriber(s).
+2020-04-10 18:19:48.089 [Test worker] INFO  o.s.c.stream.messaging.DirectWithAttributesChannel - Channel 'demo-task-1.springCloudBusOutput' has 1 subscriber(s).
+2020-04-10 18:19:48.090 [Test worker] INFO  o.s.i.g.GatewayProxyFactoryBean$MethodInvocationGateway - started bean 'taskEventListener'; defined in: 'class path resource [org/springframework/cloud/task/listener/TaskEventAutoConfiguration$ListenerConfiguration.class]'; from source: 'org.springframework.core.type.classreading.SimpleMethodMetadata@7d263467'
+2020-04-10 18:19:48.091 [Test worker] INFO  o.s.i.g.GatewayProxyFactoryBean$MethodInvocationGateway - started bean 'taskEventListener'; defined in: 'class path resource [org/springframework/cloud/task/listener/TaskEventAutoConfiguration$ListenerConfiguration.class]'; from source: 'org.springframework.core.type.classreading.SimpleMethodMetadata@7d263467'
+2020-04-10 18:19:48.091 [Test worker] INFO  o.s.i.g.GatewayProxyFactoryBean$MethodInvocationGateway - started bean 'taskEventListener'; defined in: 'class path resource [org/springframework/cloud/task/listener/TaskEventAutoConfiguration$ListenerConfiguration.class]'; from source: 'org.springframework.core.type.classreading.SimpleMethodMetadata@7d263467'
+2020-04-10 18:19:48.091 [Test worker] INFO  o.s.integration.gateway.GatewayProxyFactoryBean - started bean 'taskEventListener'; defined in: 'class path resource [org/springframework/cloud/task/listener/TaskEventAutoConfiguration$ListenerConfiguration.class]'; from source: 'org.springframework.core.type.classreading.SimpleMethodMetadata@7d263467'
+2020-04-10 18:19:48.501 [Test worker] INFO  com.example.demo.task.TaskListener - 任务执行 start: demo-task-1
+2020-04-10 18:19:48.624 [Test worker] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [192.168.56.26:5672]
+2020-04-10 18:19:48.645 [Test worker] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory.publisher#17395455:0/SimpleConnection@5ab49a6b [delegate=amqp://rabbit@192.168.56.26:5672/, localPort= 64239]
+2020-04-10 18:19:48.696 [Test worker] INFO  com.example.demo.task.TaskListener - 任务执行 start: demo-task-1
+2020-04-10 18:19:48.776 [Test worker] INFO  o.s.c.s.b.r.p.RabbitExchangeQueueProvisioner - declaring queue for inbound: springCloudBus.anonymous.IBWqvqFkTNCJZhr5vFfgkw, bound to: springCloudBus
+2020-04-10 18:19:48.829 [Test worker] INFO  o.s.cloud.stream.binder.BinderErrorChannel - Channel 'springCloudBus.anonymous.IBWqvqFkTNCJZhr5vFfgkw.errors' has 1 subscriber(s).
+2020-04-10 18:19:48.830 [Test worker] INFO  o.s.cloud.stream.binder.BinderErrorChannel - Channel 'springCloudBus.anonymous.IBWqvqFkTNCJZhr5vFfgkw.errors' has 2 subscriber(s).
+2020-04-10 18:19:48.880 [Test worker] INFO  o.s.i.amqp.inbound.AmqpInboundChannelAdapter - started bean 'inbound.springCloudBus.anonymous.IBWqvqFkTNCJZhr5vFfgkw'
+2020-04-10 18:19:48.890 [Test worker] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-04-10 18:19:48.939 [Test worker] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-04-10 18:19:49.037 [Test worker] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-04-10 18:19:49.384 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_1
+2020-04-10 18:19:49.389 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_2
+2020-04-10 18:19:49.392 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_3
+2020-04-10 18:19:49.396 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingPOST_1
+2020-04-10 18:19:49.399 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingPOST_2
+2020-04-10 18:19:49.403 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingPOST_3
+2020-04-10 18:19:49.406 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingPOST_4
+2020-04-10 18:19:49.412 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_4
+2020-04-10 18:19:49.418 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingDELETE_1
+2020-04-10 18:19:49.422 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_5
+2020-04-10 18:19:49.425 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_6
+2020-04-10 18:19:49.429 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_7
+2020-04-10 18:19:49.432 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_8
+2020-04-10 18:19:49.435 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_9
+2020-04-10 18:19:49.438 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_10
+2020-04-10 18:19:49.443 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_11
+2020-04-10 18:19:49.446 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_12
+2020-04-10 18:19:49.450 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_13
+2020-04-10 18:19:49.453 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_14
+2020-04-10 18:19:49.457 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_15
+2020-04-10 18:19:49.462 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_16
+2020-04-10 18:19:49.466 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_17
+2020-04-10 18:19:49.470 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingPOST_5
+2020-04-10 18:19:49.473 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_18
+2020-04-10 18:19:49.477 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingPOST_6
+2020-04-10 18:19:49.481 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_19
+2020-04-10 18:19:49.484 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_20
+2020-04-10 18:19:49.491 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_21
+2020-04-10 18:19:49.497 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_22
+2020-04-10 18:19:49.502 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_23
+2020-04-10 18:19:49.507 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingPOST_7
+2020-04-10 18:19:49.511 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_24
+2020-04-10 18:19:49.514 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_25
+2020-04-10 18:19:49.517 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingPOST_8
+2020-04-10 18:19:49.520 [Test worker] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: handleUsingGET_26
+2020-04-10 18:19:49.562 [Test worker] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2020-04-10 18:19:49.564 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2020-04-10 18:19:49.631 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2020-04-10 18:19:49.737 [Test worker] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - ClusterManager: detected 1 failed or restarted instances.
+2020-04-10 18:19:49.738 [Test worker] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - ClusterManager: Scanning for instance "Richy-PC1586100002649"'s failed in-progress jobs.
+2020-04-10 18:19:49.811 [Test worker] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_Richy-PC1586513965511 started.
+2020-04-10 18:19:50.162 [QuartzScheduler_DefaultQuartzScheduler-Richy-PC1586513965511_MisfireHandler] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Handling 2 trigger(s) that missed their scheduled fire-time.
+2020-04-10 18:19:50.187 [Test worker] INFO  com.example.demo.TaskApplicationTests - Started TaskApplicationTests in 41.975 seconds (JVM running for 45.135)
+2020-04-10 18:19:50.192 [Test worker] INFO  com.example.demo.task.SpringTaskRunner - Hello World from Spring Cloud Task! --ApplicationRunner
+2020-04-10 18:19:50.192 [Test worker] INFO  com.example.demo.task.SpringTaskRunner2 - Hello World from Spring Cloud Task! --CommandLineRunner
+2020-04-10 18:19:50.200 [Test worker] INFO  com.example.demo.task.TaskListener - 任务执行 end: demo-task-1
+2020-04-10 18:19:50.205 [Test worker] INFO  com.example.demo.task.TaskListener - 任务执行 end: demo-task-1
+2020-04-10 18:19:51.081 [DefaultQuartzScheduler_Worker-1] INFO  com.example.demo.quartz.CronJob - =========================定时任务每5秒执行一次===============================
+2020-04-10 18:19:51.082 [DefaultQuartzScheduler_Worker-1] INFO  com.example.demo.quartz.CronJob - jobName: CronTask1 jobGroup: TaskGroup1 taskData: hzb-cron-001
+2020-04-10 18:19:51.297 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_Richy-PC1586513965511 paused.
+2020-04-10 18:19:51.382 [SpringContextShutdownHook] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2020-04-10 18:19:51.418 [DefaultQuartzScheduler_Worker-2] INFO  com.example.demo.quartz.CronJob - =========================定时任务每5秒执行一次===============================
+2020-04-10 18:19:51.418 [DefaultQuartzScheduler_Worker-2] INFO  com.example.demo.quartz.CronJob - jobName: CronTask2 jobGroup: TaskGroup1 taskData: hzb-cron-001
+2020-04-10 18:19:52.020 [SpringContextShutdownHook] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2020-04-10 18:19:52.020 [SpringContextShutdownHook] INFO  o.s.i.amqp.inbound.AmqpInboundChannelAdapter - stopped bean 'inbound.springCloudBus.anonymous.IBWqvqFkTNCJZhr5vFfgkw'
+2020-04-10 18:19:52.041 [SpringContextShutdownHook] INFO  o.s.cloud.stream.binder.BinderErrorChannel - Channel 'demo-task-1.springCloudBus.anonymous.IBWqvqFkTNCJZhr5vFfgkw.errors' has 1 subscriber(s).
+2020-04-10 18:19:52.045 [SpringContextShutdownHook] INFO  o.s.cloud.stream.binder.BinderErrorChannel - Channel 'demo-task-1.springCloudBus.anonymous.IBWqvqFkTNCJZhr5vFfgkw.errors' has 0 subscriber(s).
+2020-04-10 18:19:52.054 [SpringContextShutdownHook] INFO  o.s.i.g.GatewayProxyFactoryBean$MethodInvocationGateway - stopped bean 'taskEventListener'; defined in: 'class path resource [org/springframework/cloud/task/listener/TaskEventAutoConfiguration$ListenerConfiguration.class]'; from source: 'org.springframework.core.type.classreading.SimpleMethodMetadata@7d263467'
+2020-04-10 18:19:52.062 [SpringContextShutdownHook] INFO  o.s.i.g.GatewayProxyFactoryBean$MethodInvocationGateway - stopped bean 'taskEventListener'; defined in: 'class path resource [org/springframework/cloud/task/listener/TaskEventAutoConfiguration$ListenerConfiguration.class]'; from source: 'org.springframework.core.type.classreading.SimpleMethodMetadata@7d263467'
+2020-04-10 18:19:52.062 [SpringContextShutdownHook] INFO  o.s.i.g.GatewayProxyFactoryBean$MethodInvocationGateway - stopped bean 'taskEventListener'; defined in: 'class path resource [org/springframework/cloud/task/listener/TaskEventAutoConfiguration$ListenerConfiguration.class]'; from source: 'org.springframework.core.type.classreading.SimpleMethodMetadata@7d263467'
+2020-04-10 18:19:52.062 [SpringContextShutdownHook] INFO  o.s.integration.gateway.GatewayProxyFactoryBean - stopped bean 'taskEventListener'; defined in: 'class path resource [org/springframework/cloud/task/listener/TaskEventAutoConfiguration$ListenerConfiguration.class]'; from source: 'org.springframework.core.type.classreading.SimpleMethodMetadata@7d263467'
+2020-04-10 18:19:52.066 [SpringContextShutdownHook] INFO  o.s.integration.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-04-10 18:19:52.067 [SpringContextShutdownHook] INFO  o.s.integration.channel.PublishSubscribeChannel - Channel 'demo-task-1.errorChannel' has 0 subscriber(s).
+2020-04-10 18:19:52.077 [SpringContextShutdownHook] INFO  o.s.integration.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+2020-04-10 18:19:52.078 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'catalogWatchTaskScheduler'
+2020-04-10 18:19:52.088 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-10 18:19:52.094 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2020-04-10 18:19:52.908 [SpringContextShutdownHook] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2020-04-10 18:19:52.909 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_Richy-PC1586513965511 shutting down.
+2020-04-10 18:19:52.909 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_Richy-PC1586513965511 paused.
+2020-04-10 18:19:52.917 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2020-04-10 18:19:52.929 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2020-04-10 18:19:52.930 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_Richy-PC1586513965511 shutdown complete.
+2020-04-10 18:19:52.931 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-04-10 18:19:52.943 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

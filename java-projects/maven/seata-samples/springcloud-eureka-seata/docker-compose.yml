@@ -1,0 +1,6 @@
+version: '3'
+services:
+ eureka:
+   build: ./eureka   #指定Dockerfile所在路径
+   ports:
+     - "8761:8761"

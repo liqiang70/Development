@@ -1,0 +1,5 @@
+http://127.0.0.1:9100/swagger-ui.html
+
+http://127.0.0.1:9100/config/show
+
+curl -X POST http://localhost:9100/actuator/refresh

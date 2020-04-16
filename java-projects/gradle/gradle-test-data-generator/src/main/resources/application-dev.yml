@@ -1,0 +1,28 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    username: uniemm
+    password: appiron@2018
+    url: jdbc:postgresql://192.168.2.26:5432/emm_manager?useUnicode=true&amp;characterEncoding=utf-8&amp;allowEncodingChanges=true
+    driver-class-name: org.postgresql.Driver
+  redis:
+    database: 0
+    host: 192.168.2.26
+    port: 6379
+    password: appiron@2018
+    timeout: 6000
+    jedis:
+      pool:
+        max-active: 1000
+        max-wait: -1
+        max-idle: 10
+        min-idle: 5
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.example.demo.model
+logging:
+  level:
+    com:
+      example:
+        mapper: debug

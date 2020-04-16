@@ -1,0 +1,43 @@
+
+1）创建seata表
+seata-mysql.sql
+
+2）启动 eureka
+
+3）启动seata-server
+
+4）创建fescar表
+all.sql
+
+5）启动其他服务
+
+--------------------------------------------------
+
+http://localhost:8084/purchase/commit
+检查数据表中的数据
+
+--------------------------------------------------
+
+修改服务名为：seat-server
+1）seata server的配置文件：registry.conf 中的application名或cluster名需要修改
+
+  eureka {
+    serviceUrl = "http://localhost:8761/eureka"
+    application = "seata-server"                    <------------需修改
+    weight = "1"
+  }
+  
+2）seata客户端 file.conf
+
+service {
+  #transaction service group mapping
+  vgroupMapping.my_test_tx_group = "seata-server"   <------------需修改
+  #only support when registry.type=file, please don't set multiple addresses
+  seata-server.grouplist = "127.0.0.1:8091"         <------------需修改
+  #degrade, current not support
+  enableDegrade = false
+  #disable seata
+  disableGlobalTransaction = false
+}
+
+  

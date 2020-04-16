@@ -1,0 +1,1 @@
+cd ..\build\libs && tail -f spring-cloud-gradle-spring-admin-8769.log 
