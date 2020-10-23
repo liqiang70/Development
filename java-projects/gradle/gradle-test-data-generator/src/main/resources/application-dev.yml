@@ -2,15 +2,15 @@ server:
   port: 8080
 spring:
   datasource:
-    username: uniemm
-    password: appiron@2018
+    username: xxxxxxx
+    password: xxxxxxxxxxxxxxxx
     url: jdbc:postgresql://192.168.2.26:5432/emm_manager?useUnicode=true&amp;characterEncoding=utf-8&amp;allowEncodingChanges=true
     driver-class-name: org.postgresql.Driver
   redis:
     database: 0
     host: 192.168.2.26
     port: 6379
-    password: appiron@2018
+    password: xxxxxxxxxxxx
     timeout: 6000
     jedis:
       pool:
